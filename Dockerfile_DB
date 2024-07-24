@@ -1,0 +1,5 @@
+# MySQL 이미지
+FROM mysql:latest
+
+# 초기 DB.sql 파일 컨테이너 import
+COPY /Base_sql/basic_db_table.sql /docker-entrypoint-initdb.d/

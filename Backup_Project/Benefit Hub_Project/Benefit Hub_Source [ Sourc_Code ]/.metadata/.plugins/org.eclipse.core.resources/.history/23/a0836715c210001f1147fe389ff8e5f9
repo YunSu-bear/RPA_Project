@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../css/Benefit_css/Content1/globals.css" />
+    <link rel="stylesheet" href="../css/Benefit_css/Content/style2.css" />
+  </head>
+  <body>
+    <div class="screen">
+      <div class="div">
+        <div class="navigation">
+				  <div class="navbar">
+				  	<div th:if="${user eq 'admin'}">
+						<div class="text-wrapper" Style="cursor: pointer;" onclick="location.href='../admin_Userpage'">관리자 페이지</div>
+					</div>
+					<div class="item-2" style="cursor: pointer;"onclick="location.href='../Community/List'">갓생은 첨이라</div>
+					<div class="item-3" style="cursor: pointer;"onclick="location.href='/Benefit/List'">혜택 및 지원금</div>
+					<div class="item-4" style="cursor: pointer;"onclick="location.href='/Main'">홈페이지</div>
+				  </div>
+           <div class="view">
+			<button class="button">환영합니다&nbsp;[[${user}]]</button>
+			<a href="/logout" class="button" style="cursor: pointer;">로그아웃</a>
+            <img onclick="location.href='../Mypage'" style="cursor: pointer;" class="vector" src="../images/benefit_img/vector-4.svg" />
+          </div>
+        </div>
+		<div class="main">
+		           <img class="banner" src="../images/benefit_img/content/banner.png" />
+		           <div class="div-board-head">
+		             <div class="overlap-group">
+		               <div class="heading">청년월세특별지원</div>
+		               <div class="span-inline-flex"><div class="text-wrapper-2">D-10</div></div>
+		             </div>
+		             <div class="span-board-sub-tit">
+		               <div class="span-board-date"><div class="text-wrapper-3">2023.9.14</div></div>
+		               <div class="span-writer">
+		                 <div class="pseudo"></div>
+		                 <div class="text-wrapper-4">국토교통부</div>
+		               </div>
+		             </div>
+		           </div>
+				   <img class="p" src="../images/benefit_img/content/2-2.png">
+		           <div class="div-fund-detail">
+		             <div class="heading-2">정책소개</div>
+		             <div class="div-contents-box">
+		               <p class="strong">
+		                 어려운 경제여건 속에서도 학업, 취업 준비 등 본연의 삶을 꾸려나가는데 보탬이 될 수 있도록<br />청년들에게
+		                 월 최대 20만원(12개월)의 월세를 지원합니다.
+		               </p>
+		             </div>
+		           </div>
+		           <div class="div-fund-detail-2">
+		             <div class="heading-3">정책내용</div>
+		             <div class="descriptions">
+		               <div class="div-hd-ed">
+		                 <div class="term">지원내용</div>
+		                 <div class="details">
+		                   <p class="element">
+		                     저소득 청년층의 주거비 부담을 덜어주기 위해 1년간 매달 월세<br />최대 20만원 지원(최대 12개월,
+		                     생애 1회 한정)
+		                   </p>
+		                 </div>
+		               </div>
+		               <div class="div-hd-bcd">
+		                 <div class="term-2">지원대상</div>
+		                 <div class="element-wrapper">
+		                   <p class="element-2">
+		                     만 19세~34세 독립거주 무주택 청년 중 청년독립가구 소득이 기준<br />중위소득 60% 이하이면서, 원가구
+		                     소득이 중위소득 100% 이하인 청년
+		                   </p>
+		                 </div>
+		               </div>
+		               <div class="div-hd-fdfdd">
+		                 <div class="term-3">신청방법</div>
+		                 <div class="details"><div class="text-wrapper-5">복지로 누리집이나 어플리케이션으로 신청</div></div>
+		               </div>
+		               <div class="div-full">
+		                 <div class="term-4">제출서류</div>
+		                 <div class="div-wrapper">
+		                   <p class="text-wrapper-6">
+		                     월세지원 신청서와 함께, 소득/재산 등 요건 확인에 필요한 서류를 첨부<br />-신청서에는 천연가구와
+		                     원가구의 가구원 정보, 거주조건 및 지급계좌 등을 기재하고, 소득재산 신고서 및 서약서 등을 함께 제출
+		                   </p>
+		                 </div>
+		               </div>
+		             </div>
+		           </div>
+		         </div>
+		       </div>
+		       <a href="https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004661" style="cursor: pointer;" class="button-2">
+				<div class="text-wrapper-7">신청하기</div>
+			   </a>
+			     <footer class="footer">
+			             <div class="view-2">
+			               <div class="div-cl-control">
+			                 <div class="div-cl-layout">
+			                   <button class="button-3"><div class="text-wrapper-8">대학인싸</div></button>
+			                   <button class="button-4"><div class="text-wrapper-8">뉴스레터</div></button>
+			                   <button class="button-5"><div class="text-wrapper-9">개인정보처리방침</div></button>
+			                   <button class="button-6"><div class="text-wrapper-8">사이트맵</div></button>
+			                 </div>
+			               </div>
+			               <div class="div-cl-layout-2">
+			                 <div class="div-cl-text"><div class="text-wrapper-10">회사명</div></div>
+			                 <div class="div-cl-text-2"><div class="text-wrapper-11">주소</div></div>
+			                 <div class="naver-com-wrapper"><div class="naver-com">dbstn6622@naver.com</div></div>
+			                 <div class="div-cl-text-3">
+			                   <p class="text-wrapper-12">16391 수원시 권선구 금곡로 229 로얄펠리스 3차 935호</p>
+			                 </div>
+			                 <div class="div-cl-text-4"><div class="text-wrapper-12">(주) 대학인싸</div></div>
+			                 <div class="div-cl-control-2"><div class="text-wrapper-13">010-1234-5678</div></div>
+			               </div>
+			             </div>
+			             <div class="span-text-sm">
+			               <div class="text-wrapper-14">© 2023</div>
+			               <div class="link-MAYCAN-inc">대학인싸.inc. All Rights Reserved.</div>
+			             </div>
+			           </footer>
+			         </div>
+			       </div>
+			     </body>
+			   </html>

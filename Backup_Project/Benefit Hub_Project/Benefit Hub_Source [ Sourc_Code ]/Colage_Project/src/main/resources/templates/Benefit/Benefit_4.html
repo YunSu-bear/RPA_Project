@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+	<link rel="stylesheet" href="../css/Benefit_css/Content/globals.css" />
+	<link rel="stylesheet" href="../css/Benefit_css/Content/style4.css" />
+  </head>
+  <body>
+    <div class="screen">
+      <div class="div">
+        <div class="overlap">
+			<div class="navigation">
+				<div class="navbar">
+					<div th:if="${user eq 'admin'}">
+						<div class="text-wrapper" Style="cursor: pointer;" onclick="location.href='../admin_Userpage'">관리자 페이지</div>
+					</div>
+			    	<div class="item-2" style="cursor: pointer" onclick="location.href='../Community/List'">갓생은 첨이라</div>
+			        <div class="item-3"	style="cursor: pointer;"onclick="location.href='/Benefit/List'">혜택 및 지원금</div>
+			        <div class="item-4"	style="cursor: pointer;"onclick="location.href='/Main'">홈페이지</div>
+				</div>
+			<div class="view">
+					<button class="button">환영합니다&nbsp;[[${user}]]</button>
+					<a href="/logout" class="button" style="cursor: pointer;">로그아웃</a>
+					<img onclick="location.href='../Mypage/main'" style="cursor: pointer;" class="vector" src="../images/benefit_img/vector-4.svg" />
+			</div>	
+          </div>
+          <div class="main">
+            <div class="div-board-head">
+              <div class="overlap-group">
+                <div class="heading">청년도전지원사업</div>
+                <div class="span-inline-flex"><div class="text-wrapper-2">D-20</div></div>
+              </div>
+              <div class="span-board-sub-tit">
+                <div class="span-board-date"><div class="text-wrapper-3">2023.9.14</div></div>
+                <div class="span-writer">
+                  <div class="pseudo"></div>
+                  <div class="text-wrapper-4">고용노동부</div>
+                </div>
+              </div>
+            </div>
+            <img class="p" src="../images/benefit_img/content/4-4.png">
+            <div class="div-fund-detail">
+              <div class="heading-2">정책소개</div>
+              <div class="div-contents-box">
+                <p class="strong">
+                  구직단념청년 등에게 구직의욕 고취 및 자신감 강화를 위한 맞춤형 프로그램을 제공하여 <br />노동시장 참여
+                  및 취업촉진을 지원합니다
+                </p>
+              </div>
+            </div>
+            <div class="div-fund-detail-2">
+              <div class="heading-3">정책내용</div>
+              <div class="descriptions">
+                <div class="div-hd-ed">
+                  <div class="term">지원내용</div>
+                  <div class="details">
+                    <p class="element-x">
+                      구직단념청년에게 맞춤형 프로그램 제공 및 이수<br />-사회활동 참여의욕 고취를 위한 집단 및 개별
+                      맞춤형 프로그램<br />-도전프로그램 이수 시 참여수당 50만원, 도전+프로그램 참여수당 월 50만원 X
+                      5개월, 인센티브 50만원
+                    </p>
+                  </div>
+                </div>
+                <div class="div-hd-bcd">
+                  <div class="term-2">지원대상</div>
+                  <div class="element-wrapper">
+                    <p class="element">
+                      <span class="span">6개월 이상 취업 및 교육</span>
+                      <span class="text-wrapper-5"> • </span>
+                      <span class="span"
+                        >직업훈련 참여 이력이 없고<br />구직단념청년 문답표 21점 이상<br />(만점 30점)인 청년(만
+                        18세~34세)</span
+                      >
+                    </p>
+                  </div>
+                </div>
+                <div class="div-hd-fdfdd">
+                  <div class="term-3">신청방법</div>
+                  <div class="details">
+                    <p class="text-wrapper-6">
+                      워크넷 홈페이지 접속하여 회원가입 후 구직회원 전환<br />워크넷 홈페이지 접속하여 로그인 후
+                      ‘고용복지정책’ 탭 내 ‘청년도전지원사업’ 클릭 또는 아래 신청하기 클릭<br />지원대상 및 청년센터
+                      확인 후 신청 누르기<br />개인정보 입력 및 계좌번호 입력하기<br />개인정보동의 및 통장사본 등록<br />신청기관
+                      선택하기
+                    </p>
+                  </div>
+                </div>
+                <div class="div-full">
+                  <div class="term-4">제출서류</div>
+                  <div class="div-wrapper"><div class="text-wrapper-7">-</div></div>
+                </div>
+              </div>
+            </div>
+            <a href="https://www.work.go.kr/youngChallenge/index.do" style="cursor: pointer;" class="button-2">
+				<div class="text-wrapper-8">신청하기</div></a>
+            <img class="banner" src="../images/benefit_img/content/banner.png" />
+          </div>
+        </div>
+        <footer class="footer">
+          <div class="view-2">
+            <div class="div-cl-control">
+              <div class="div-cl-layout">
+                <button class="button-3"><div class="text-wrapper-9">대학인싸</div></button>
+                <button class="button-4"><div class="text-wrapper-9">뉴스레터</div></button>
+                <button class="button-5"><div class="text-wrapper-10">개인정보처리방침</div></button>
+                <button class="button-6"><div class="text-wrapper-9">사이트맵</div></button>
+              </div>
+            </div>
+            <div class="div-cl-layout-2">
+              <div class="div-cl-text"><div class="text-wrapper-11">회사명</div></div>
+              <div class="div-cl-text-2"><div class="text-wrapper-12">주소</div></div>
+              <div class="naver-com-wrapper"><div class="naver-com">dbstn6622@naver.com</div></div>
+              <div class="div-cl-text-3">
+                <p class="text-wrapper-13">16391 수원시 권선구 금곡로 229 로얄펠리스 3차 935호</p>
+              </div>
+              <div class="div-cl-text-4"><div class="text-wrapper-13">(주) 대학인싸</div></div>
+              <div class="div-cl-control-2"><div class="text-wrapper-14">010-1234-5678</div></div>
+            </div>
+          </div>
+          <div class="span-text-sm">
+            <div class="text-wrapper-15">© 2023</div>
+            <div class="link-MAYCAN-inc">대학인싸.inc. All Rights Reserved.</div>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>

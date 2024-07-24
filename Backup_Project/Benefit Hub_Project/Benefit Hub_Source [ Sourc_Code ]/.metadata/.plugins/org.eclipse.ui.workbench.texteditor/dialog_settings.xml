@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="selection" value="form"/>
+		<item key="wrap" value="true"/>
+		<item key="casesensitive" value="false"/>
+		<item key="wholeword" value="false"/>
+		<item key="incremental" value="false"/>
+		<item key="isRegEx" value="false"/>
+		<list key="findhistory">
+			<item value="form"/>
+			<item value="overlap-2"/>
+			<item value="overlap"/>
+			<item value="over"/>
+			<item value="text-wrapper-9"/>
+			<item value="text_wrapper-9"/>
+			<item value="9"/>
+			<item value="/Mypage"/>
+			<item value="text-wrapper-12"/>
+			<item value="12"/>
+			<item value="/login_serh"/>
+			<item value="join_up"/>
+			<item value="/join_chk"/>
+			<item value="chk"/>
+			<item value="act"/>
+		</list>
+		<list key="replacehistory">
+			<item value="/Mypage/main"/>
+			<item value="welcome"/>
+			<item value="&quot;/B"/>
+			<item value="455"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="71"/>
+		<item key="DIALOG_Y_ORIGIN" value="816"/>
+		<item key="DIALOG_WIDTH" value="418"/>
+		<item key="DIALOG_HEIGHT" value="523"/>
+		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-18|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
+	</section>
+</section>

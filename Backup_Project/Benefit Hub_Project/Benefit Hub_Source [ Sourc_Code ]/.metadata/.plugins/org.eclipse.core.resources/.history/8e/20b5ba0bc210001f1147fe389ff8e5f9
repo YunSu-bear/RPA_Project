@@ -1,0 +1,54 @@
+package com.Java.Funct.Web_Control;
+
+import java.security.Principal;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.Java.Funct.DB_Map.SQL_Map;
+import com.Java.Funct.dto_Util.dto_users;
+
+import jakarta.servlet.http.Cookie;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
+
+@Controller
+@RequestMapping("Mypage")
+public class Web_Control_Mypage {
+	@Autowired
+	SQL_Map sql;
+
+	@PostMapping("re_addr_action") // 유저 페이지 주소 수정
+	public String re_addr(@RequestParam String u_addr,Principal principal, Model model) {
+		String u_id =principal.getName();
+		String user_info = u_id;
+		sql.updat_addr(u_addr, u_id);
+	    sql.mypage_data(user_info);
+	    List<dto_users> mydata = sql.mypage_data(user_info);
+	    model.addAttribute("mydata", mydata);
+		model.addAttribute("user", user_info);
+		System.out.println(user_info + " : 유저가 주소를 수정했습니다");
+		return "/Mypage_suc"; }
+
+	@PostMapping("re_passwd_act") // 비밀번호 변경 시 로그아웃 [ 세션 및 쿠키 초기화 ]
+	public String re_passwd(@RequestParam String u_pw, @RequestParam String n_pw,
+	                        @RequestParam String n_pw_c, Principal principal
+	                        ,HttpServletRequest request, HttpServletResponse response) {
+		String name = principal.getName();
+	    sql.updat_pw(n_pw, u_pw);
+	    HttpSession session = request.getSession(false); // 세션 불러오기
+	    if (session != null) { session.invalidate(); } // 세션 초기화
+	    Cookie[] cookies = request.getCookies();
+	    if (cookies != null) { // 쿠키 제거
+	    	for (Cookie cookie : cookies) {
+	    		if ("u_info".equals(cookie.getName())) {
+	    			cookie.setMaxAge(0);
+	    			response.addCookie(cookie); break; } } }
+	     return "/redirect:/login"; }// 로그아웃
+}

@@ -1,0 +1,141 @@
+package com.Java.Funct.cont;
+
+import java.security.Principal;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.Java.Funct.DB_Map.SQL_Map;
+import com.Java.Funct.dto_Util.dto_posts;
+import com.Java.Funct.dto_Util.dto_users;
+
+import jakarta.servlet.http.Cookie;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
+
+@Controller
+public class DB_Control_action {
+	@Autowired // db 연결
+	SQL_Map sql;
+
+	@PostMapping("re_addr_action") // 유저 페이지 주소 수정
+	public String re_addr(@RequestParam String u_addr,Principal principal, Model model) {
+		String u_id =principal.getName();
+		String user_info = u_id;
+		sql.updat(u_addr, u_id);
+	    sql.mypage_data(user_info);
+	    List<dto_users> mydata = sql.mypage_data(user_info);
+	    model.addAttribute("mydata", mydata);
+		model.addAttribute("user", user_info);
+		System.out.println(user_info + " : 유저가 주소를 수정했습니다");
+		return "/Mypage_suc"; }
+
+	@PostMapping("re_passwd_act") // 시큐리티 복잡성으로 느껴 이곳만 서버에서 직접 로그아웃
+	public String re_passwd(@RequestParam String u_pw, @RequestParam String n_pw,
+	                        @RequestParam String n_pw_c, Principal principal
+	                        ,HttpServletRequest request, HttpServletResponse response) {
+		String name = principal.getName();
+	    sql.updat_pw(n_pw, u_pw);
+	    HttpSession session = request.getSession(false); // 세션 불러오기
+	    if (session != null) { session.invalidate(); } // 세션 초기화
+	    Cookie[] cookies = request.getCookies();
+	    if (cookies != null) { // 쿠키 제거
+	    	for (Cookie cookie : cookies) {
+	    		if ("u_info".equals(cookie.getName())) {
+	    			cookie.setMaxAge(0);
+	    			response.addCookie(cookie); break; } } }
+	     return "/redirect:/login"; }// 로그아웃
+
+	@PostMapping("edit_action_u") // 유저 수정 트리거
+	public String user_edit(@RequestParam(name="edit_user") String u_num, Model model,Principal principal) {
+		String user_info = principal.getName();
+		List<dto_users> edit_li = sql.selectuser_num(u_num);
+		System.out.println(u_num);
+		model.addAttribute("user", user_info);
+		model.addAttribute("sel_user", edit_li);
+		return "/edit_action"; }
+
+	@PostMapping("edit_user") // 유저 수정 완료 트리거
+	public String user_edit_suc(@RequestParam(name="username") String u_id, @RequestParam(name="password") String u_pw,
+							 	@RequestParam String u_nm, @RequestParam String u_addr,
+							 	@RequestParam String u_sec_n1, @RequestParam String u_sec_n2,@RequestParam String u_num,
+							 	Model model, Principal principal) {
+		String user_info = principal.getName();
+		sql.updat_user(u_num, u_id, u_pw, u_nm, u_addr, u_sec_n1, u_sec_n2);
+		model.addAttribute("user", user_info);
+		return "/admin_UserPage"; }
+
+	@PostMapping("edit_action_p") // 게시글 수정 트리거
+	public String post_edit(@RequestParam(name="A") String post_num, Principal principal,Model model) {
+		String user_info = principal.getName();
+		List<dto_posts> edit_li = sql.selectPost_num(post_num);
+		model.addAttribute("sel_post", edit_li);
+		model.addAttribute("user", user_info);
+		return "/Community/Writing [ admin ]"; }
+
+	@PostMapping("edit_writing_action") // 게시글 수정 완료 트리거
+	public String post_edit_suc(@RequestParam String post_num, @RequestParam String title, @RequestParam String chat
+								,Model model, Principal principal) {
+		String user_info = principal.getName();
+		sql.updat_post(post_num, title, chat);
+		model.addAttribute("user", user_info);
+		return "/redirect:admin_PostPage"; }
+
+	@PostMapping("delete_action_p") // 게시글 삭제 트리거
+	public String post_del(@RequestParam(name="A") String post_num, Principal principal) {
+		String user_info = principal.getName();
+		sql.del_post(post_num);
+		return "/redirect:admin_Postpage"; }
+
+	@PostMapping("delete_action_u") // 유저 삭제 트리거
+	public String user_del(@RequestParam(name="B") String u_num, Principal principal) {
+		String user_info = principal.getName();
+		sql.del_user(u_num);
+		return "/redirect:admin_Userpage"; }
+
+	@PostMapping("dup_chk")
+	public String user_id_chk (@RequestParam(name="username") String u_id, Model model, Principal principal) {
+		int chk = 0;
+		String chked = sql.chking_id(u_id);
+		if(chked != null && chked.equals(u_id)) {
+			chk = 1;
+			model.addAttribute("dup", chk); }
+		else {
+			chk = 0;
+			model.addAttribute("dup", chk); }
+		return "/join_chk"; }
+
+	@PostMapping("/id_ser")
+	public String IDserh(@RequestParam String u_nm, @RequestParam String u_addr, Model model) {
+		String id = sql.serch_id(u_nm, u_addr);
+		int ser = 0;
+		if(id != null) {
+			ser = 1;
+			model.addAttribute("ser", ser);
+			model.addAttribute("serh_id", id);
+			return "/login_serh"; }
+		else {
+			ser = 0;
+			model.addAttribute("ser", ser); }
+			return "/login_serh"; }
+	@PostMapping("/pw_ser")
+	public String PWserh(@RequestParam String u_id, @RequestParam String u_nm,
+						 @RequestParam String u_addr, Model model) {
+		String pw = sql.serch_pw(u_id ,u_nm, u_addr);
+		int ser = 0;
+		if(pw != null) {
+			ser = 1;
+			model.addAttribute("ser_pw", ser);
+			model.addAttribute("serh_pw", pw);
+			return "/login_serh"; }
+		else {
+			ser = 0;
+			model.addAttribute("ser_pw", ser); }
+			return "/login_serh"; }
+}
+

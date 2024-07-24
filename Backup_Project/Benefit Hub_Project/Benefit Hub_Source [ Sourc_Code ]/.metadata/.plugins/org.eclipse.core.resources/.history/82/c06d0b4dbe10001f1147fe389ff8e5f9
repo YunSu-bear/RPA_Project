@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="/css/Login_css/serh_bor_css.css" />
+    <link rel="stylesheet" href="/css/login_css/serh.css" />
+  </head>
+  <body>
+    <div class="screen">
+      <div class="div">
+        <div class="navigation">
+          <div class="navbar">
+			<div class="item-3" style="cursor: pointer;"onclick="location.href='Community/List'">갓생은 첨이라</div>
+		  	<div class="item-4" style="cursor: pointer;" onclick="location.href='Benefit/List'">혜택 및 지원금</div>
+		  	<div class="item-5" style="cursor: pointer;" onclick="location.href='/Main'">홈페이지</div>
+          </div>
+          <div class="link" style="cursor: pointer;"onclick="location.href='welcome'"><div class="text-wrapper-8">로그인</div></div>
+        </div>
+        <div class="main">
+          <div class="heading"><div class="text-wrapper-9">계정 찾기</div></div>
+          <div class="view">
+            <form action="id_ser" method="post" class="form">
+              <div class="email">
+                <div class="label"><div class="text-wrapper-10" >이름</div></div>
+                <input name="u_nm" class="input">
+              </div>
+              <div class="password">
+                <input name="u_addr" class="input">
+                <div class="label">
+                  <div class="label-2"><div class="text-wrapper-11">주소</div></div>
+                </div>
+              </div>
+              <button type="submit" class="button-4"><div class="text-wrapper-12">아이디 찾기</div></button>
+              <script th:if="${ser_id == 1}">
+              		alert('당신의 아이디는 : ' + '[[${serh_id}]]' + ' 입니다');
+              </script> 
+    		  <script th:if="${ser_id == 0}">
+      				alert('아이디가 존재하지 않습니다');
+    	      </script>
+            </form>
+            </div>
+          <div class="form-wrapper">
+            <form action="pw_ser" method="post" class="form">
+              <div class="password-2">
+                <div class="label">
+                  <div class="label-3"><div class="text-wrapper-11">이름</div></div>
+                </div>
+                <input name="u_nm" class="input">
+              </div>
+              <div class="text-wrapper-13">주소</div>
+              <input name="u_addr" class="input-2">
+              <div class="email">
+                <div class="label"><div class="text-wrapper-10">아이디</div></div>
+                <input name="u_id" class="input">
+              </div>
+              <button type="submit" class="button-5"><div class="text-wrapper-12">비밀번호 찾기</div></button>
+              <script th:if="${ser_pw == 1}">
+              		alert('비밀번호는 ' + '[[${serh_pw}]]' + " 입니다");
+              </script> 
+    		  <script th:if="${ser_pw == 0}">
+      				alert('계정이 존재하지 않습니다');
+    	      </script>
+    	      </form>
+            </div>
+          </div>
+        <div class="footer">
+          <div class="footer-2">
+            <div class="div-cl-control">
+              <div class="div-cl-layout">
+                <button class="button"><div class="text-wrapper">대학인싸</div></button>
+                <button class="div-wrapper"><div class="text-wrapper">뉴스레터</div></button>
+                <button class="button-2"><div class="text-wrapper-2">개인정보처리방침</div></button>
+                <button class="button-3"><div class="text-wrapper">사이트맵</div></button>
+              </div>
+            </div>
+            <div class="div-cl-layout-2">
+              <div class="div-cl-text"><div class="text-wrapper-3">회사명</div></div>
+              <div class="div-cl-text-2"><div class="text-wrapper-4">주소</div></div>
+              <div class="naver-com-wrapper"><div class="naver-com">dbstn6622@naver.com</div></div>
+              <div class="div-cl-text-3">
+                <p class="text-wrapper-5">16391 수원시 권선구 금곡로 229 로얄펠리스 3차 935호</p>
+              </div>
+              <div class="div-cl-text-4"><div class="text-wrapper-5">(주) 대학인싸</div></div>
+              <div class="div-cl-control-2"><div class="text-wrapper-6">010-1234-5678</div></div>
+            </div>
+          </div>
+          <div class="copyright">
+            <div class="text-wrapper-7">© 2023</div>
+            <div class="link-MAYCAN-inc">대학인싸.inc. All Rights Reserved.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

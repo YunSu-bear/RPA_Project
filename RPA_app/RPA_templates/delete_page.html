@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type=text/css href="{% static 'css/index.css' %}">
+    <title>사출 계산 사이트</title>
+</head>
+<body>
+    <div class="container">
+        <div class="caption-container">사출 원가표</div>
+        <table>
+            <form method="post">
+            <div class="button-container">
+                {% csrf_token %}
+                <button type="submit" name="delete" value="data_del"><a>삭제하기</a></button>
+                <button><a href="{% url 'home' %}">돌아가기</a></button>
+            </div>
+            <thead>
+                <tr>
+                    <th>&nbsp;</th>
+                    <th>금형변호</th>
+                    <th>품명</th>
+                    <th>재질</th>
+                    <th>그레이드</th>
+                    <th>제품중량(g)</th>
+                    <th>S/R중량(g)</th>
+                    <th>설비톤수</th>
+                    <th>Cav.</th>
+                    <th>C/T (sec.)</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in data %}
+                <tr>
+                    <td><input type="checkbox" name="item" value="{{ item.Data_Number }}"></td>
+                    <td>{{ item.Mold_Number }}</td>
+                    <td>{{ item.Product_Name }}</td>
+                    <td>{{ item.Texture }}</td>
+                    <td>{{ item.Grade }}</td>
+                    <td>{{ item.Product_Weight }}</td>
+                    <td>{{ item.SR_Weight }}</td>
+                    <td>{{ item.Bright_tone }}</td>
+                    <td>{{ item.Cav }}</td>
+                    <td>{{ item.C_T }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

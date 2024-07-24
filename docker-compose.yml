@@ -1,0 +1,76 @@
+# DOCKER 네트워크 연결
+networks:
+  databases:
+    driver: bridge
+
+# DOCKER 컨테이너 연결
+services:
+  # Main_Database - [ MySQL ]
+  Main:
+    image: mysql:latest
+    build:
+      context: .
+      dockerfile: Dockerfile_DB
+    restart: always
+    container_name: main_db
+    environment:
+      MYSQL_ROOT_PASSWORD: globalm
+      MYSQL_DATABASE: rpa_databases
+    volumes:
+      - ./MainDB_data:/var/lib/mysql 
+    ports:
+      - "3307:3306"
+    networks:
+      - databases
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+  # BackUp_Database - [ MySQL ]
+  BackUp:
+    image: mysql:latest
+    build:
+      context: .
+      dockerfile: Dockerfile_DB
+    restart: always
+    container_name: backUp_db
+    environment:
+      MYSQL_ROOT_PASSWORD: globalb
+      MYSQL_DATABASE: back_rpa_databases
+    volumes:
+      - ./BackDB_data:/var/lib/mysql 
+    ports:
+      - "3308:3306"
+    networks:
+      - databases
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+  # 하루 주기로 백업
+  BackupScheduler:
+    image: mysql:latest
+    container_name: backupScheduler
+    entrypoint: ["/bin/sh", "-c", "while true; do sleep 86400; ./backup.sh; done"]
+    volumes:
+      - ./Backup:/backup
+    networks:
+      - databases 
+  # Main_Web - [ Django ]
+  web:
+    networks:
+      - databases
+    container_name: RPA_Web
+    build:
+      context: .
+      dockerfile: Dockerfile  
+    command: python manage.py runserver 0.0.0.0:8000 --settings=RPA_config.settings
+    volumes:
+      - .:/code
+    ports:
+      - "8000:8000"
+    depends_on:
+     Main:
+        condition: service_healthy

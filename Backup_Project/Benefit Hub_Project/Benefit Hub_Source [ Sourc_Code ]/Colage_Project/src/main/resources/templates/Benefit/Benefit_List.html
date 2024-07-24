@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../css/Benefit_css/List/globals.css" />
+    <link rel="stylesheet" href="../css/Benefit_css/List/style.css" />
+  </head>
+  <body>
+    <div class="screen">
+      <div class="div">
+      	<div class="navigation">
+				  <div class="navbar">
+				  	<div th:if="${user eq 'admin'}">
+						<div class="item-2" Style="cursor: pointer;" onclick="location.href='../admin_Userpage'">관리자 페이지</div>
+					</div>
+					<div class="item-3" style="cursor: pointer;"onclick="location.href='../Community/List'">갓생은 첨이라</div>
+					<div class="item-4" style="cursor: pointer;"onclick="location.href='/Benefit/List'">혜택 및 지원금</div>
+					<div class="item-5" style="cursor: pointer;"onclick="location.href='/Main'">홈페이지</div>
+				  </div>
+          <div class="view-9">
+			<button class="button-6">환영합니다&nbsp;[[${user}]]</button>
+			<a href="/logout" class="button-6" style="cursor: pointer;">로그아웃</a>
+            <img onclick="location.href='../Mypage/main'" style="cursor: pointer;" class="vector" src="../images/benefit_img/vector-4.svg" />
+          </div>
+		</div>
+        </div>
+        <div class="overlap">
+          <img class="banner" src="../images/benefit_img/banner.png" />
+          <div class="main">
+            <div class="overlap-group">
+              <div class="view">
+                <div class="div-inline-flex">
+                  <img class="SVG" src="../images/benefit_img/image.svg" />
+                  <div class="span-text-sm"><div class="text-wrapper">마감순</div></div>
+                </div>
+                <div class="div-inline-flex-2">
+                  <img class="SVG" src="../images/benefit_img/svg.svg" />
+                  <div class="span-text-sm"><div class="text-wrapper">최신순</div></div>
+                </div>
+                <div class="view-2">
+                  <div class="view-3">
+                    <div class="text-wrapper-2">정책분야</div>
+                    <div class="text-wrapper-3">지역</div>
+                    <div class="text-wrapper-4">주최기관</div>
+                  </div>
+                  <div class="view-4">
+                    <div class="view-5">
+                      <div class="span-text-sm-wrapper">
+                        <div class="div-wrapper"><div class="text-wrapper-5">#취업</div></div>
+                      </div>
+                      <div class="div-inline-flex-3">
+                        <div class="div-wrapper"><div class="text-wrapper-6">#학업</div></div>
+                      </div>
+                      <div class="span-text-sm-wrapper">
+                        <div class="div-wrapper"><div class="text-wrapper">#일상</div></div>
+                      </div>
+                    </div>
+                    <div class="view-6">
+                      <div class="span-text-sm-wrapper">
+                        <div class="div-wrapper"><div class="text-wrapper-6">#전국</div></div>
+                      </div>
+                      <div class="div-inline-flex-3">
+                        <div class="span-text-sm-2"><div class="text-wrapper-7">#서울</div></div>
+                      </div>
+                      <div class="span-text-sm-wrapper">
+                        <div class="span-text-sm-2"><div class="text-wrapper-8">#경기도</div></div>
+                      </div>
+                    </div>
+                    <div class="view-7">
+                      <div class="span-text-sm-wrapper">
+                        <div class="span-text-sm-3"><div class="text-wrapper-9">#대학교</div></div>
+                      </div>
+                      <div class="div-inline-flex-3">
+                        <div class="span-text-sm-4"><div class="text-wrapper-10">#기업</div></div>
+                      </div>
+                      <div class="span-text-sm-wrapper">
+                        <div class="span-text-sm-4"><div class="text-wrapper-10">#정부</div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="overlap-group-wrapper">
+                <div class="overlap-group-2">
+                  <div class="div-grid"></div>
+                  <div class="frame">
+                    <div class="div-group">
+                      <div class="div-flex">
+                        <div class="div-w-full">
+                          <div class="div-my">
+                            <div class="keyword">
+                              <div class="span-inline-flex"><div class="text-wrapper-11">취업</div></div>
+                              <div class="span-inline-flex-2"><div class="text-wrapper-11">전국</div></div>
+                              <div class="span-inline-flex-3"><div class="text-wrapper-12">정부</div></div>
+                            </div>
+                            <div class="span-inline-flex-4"><div class="text-wrapper-13">D-20</div></div>
+                            <div class="div-flex-margin">
+                              <div class="div-flex-2">
+                                <div class="p-line-clamp"><div class="text-wrapper-14">고용노동부</div></div>
+                                <div class="p-line-clamp-wrapper">
+                                  <div class="p-line-clamp-2">
+                                    <p class="p">
+                                      <a href="1">[국민취업지원제도] 지원 사각지대는 없애고! 취약계층 보호는 더 두텁게</a>
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <a href="1" style="cursor: pointer" class="span-inline-flex-5"><div class="text-wrapper-15">자세히</div></a>
+                        </div>
+                        <div class="figure-wrapper">
+                          <div class="figure">
+                            <div class="image-wrapper"><img class="image" src="../images/benefit_img/image.png" /></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="div-group">
+                      <div class="div-flex">
+                        <div class="div-w-full">
+                          <div class="div-my">
+                            <div class="span-inline-flex-6"><div class="text-wrapper-16">D-20</div></div>
+                            <div class="div-flex-margin">
+                              <div class="div-flex-2">
+                                <div class="p-line-clamp"><div class="text-wrapper-17">국토교통부</div></div>
+                                <div class="p-line-clamp-wrapper">
+                                  <div class="p-line-clamp-2">
+                                    <p class="text-wrapper-18">
+                                      [청년월세 특별지원] 최대 240만원 지원! 1년간 매달 최대 20만 원씩
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="keyword">
+                              <div class="span-inline-flex"><div class="text-wrapper-11">일상</div></div>
+                              <div class="span-inline-flex-2"><div class="text-wrapper-11">전국</div></div>
+                              <div class="span-inline-flex-3"><div class="text-wrapper-12">정부</div></div>
+                            </div>
+                          </div>
+                          <a href="2" style="cursor: pointer" class="span-inline-flex-5"><div class="text-wrapper-15">자세히</div></a>
+                        </div>
+                        <div class="figure-wrapper">
+                          <div class="img-wrapper">
+                            <img class="img" src="../images/benefit_img/b43a41b7b8334bfea15964756bd6b5fc-png.png" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="div-group">
+                      <div class="div-flex">
+                        <div class="div-w-full">
+                          <div class="div-my">
+                            <div class="span-inline-flex-7"><div class="text-wrapper-11">일상</div></div>
+                            <div class="span-inline-flex-8"><div class="text-wrapper-11">전국</div></div>
+                            <div class="span-inline-flex-9"><div class="text-wrapper-12">정부</div></div>
+                            <div class="span-inline-flex-10"><div class="text-wrapper-19">D-25</div></div>
+                            <div class="div-flex-margin">
+                              <div class="div-flex-2">
+                                <div class="p-line-clamp"><div class="text-wrapper-20">보건복지부</div></div>
+                                <div class="p-line-clamp-wrapper">
+                                  <div class="p-line-clamp-2">
+                                    <p class="p">[청년내일저축계좌] 매월 10만원씩 넣으면 매월 국가에서 10~30만원씩!</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <a href="3" style="cursor: pointer" class="span-inline-flex-5"><div class="text-wrapper-15">자세히</div></a>
+                        </div>
+                        <div class="figure-wrapper">
+                          <div class="img-wrapper">
+                            <img class="img-2" src="../images/benefit_img/1609fc417afc4517acf89c642496d279-jpg.png" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="div-group">
+                      <div class="div-flex">
+                        <div class="div-w-full">
+                          <div class="div-my">
+                            <div class="span-inline-flex-10"><div class="text-wrapper-19">D-25</div></div>
+                            <div class="div-flex-margin">
+                              <div class="div-flex-2">
+                                <div class="p-line-clamp"><div class="text-wrapper-21">고용노동부</div></div>
+                                <div class="p-line-clamp-wrapper">
+                                  <div class="p-line-clamp-2">
+                                    <p class="text-wrapper-22">
+                                      [청년도전지원사업] 도전프로그램 이수 시 참여수당 50만원!
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="span-inline-flex-7"><div class="text-wrapper-11">취업</div></div>
+                            <div class="span-inline-flex-8"><div class="text-wrapper-11">전국</div></div>
+                            <div class="span-inline-flex-9"><div class="text-wrapper-12">정부</div></div>
+                          </div>
+                          <a href="4" style="cursor: pointer" class="span-inline-flex-5"><div class="text-wrapper-15">자세히</div></a>
+                        </div>
+                        <div class="figure-wrapper">
+                          <div class="img-wrapper">
+                            <img class="img-2" src="../images/benefit_img/1609fc417afc4517acf89c642496d279-jpg-1.png" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="frame-2">
+                    <div class="div-group">
+                      <div class="div-flex">
+                        <div class="div-w-full">
+                          <div class="div-my">
+                            <div class="span-inline-flex-4"><div class="text-wrapper-23">D-30</div></div>
+                            <div class="div-flex-margin">
+                              <div class="div-flex-2">
+                                <div class="p-line-clamp"><div class="text-wrapper-24">중소벤처기업진흥공단</div></div>
+                                <div class="p-line-clamp-wrapper">
+                                  <div class="p-line-clamp-2">
+                                    <p class="text-wrapper-25">
+                                      [청년전용창업자금] 새로운 시작을 위한 청년에게 1억원 지급!
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="keyword">
+                              <div class="span-inline-flex"><div class="text-wrapper-11">취업</div></div>
+                              <div class="span-inline-flex-2"><div class="text-wrapper-11">전국</div></div>
+                              <div class="span-inline-flex-3"><div class="text-wrapper-12">정부</div></div>
+                            </div>
+                          </div>
+                          <a href="5" style="cursor: pointer" class="span-inline-flex-5"><div class="text-wrapper-15">자세히</div></a>
+                        </div>
+                        <div class="figure-wrapper">
+                          <div class="figure">
+                            <div class="image-wrapper-2"><img class="image" src="../images/benefit_img/a430a3f9ba41428ba0408d0266fe1493-jpg-1.png" /></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="div-group">
+                      <div class="div-flex">
+                        <div class="div-w-full">
+                          <div class="div-my">
+                            <div class="span-inline-flex-6"><div class="text-wrapper-26">D-30</div></div>
+                            <div class="div-flex-margin">
+                              <div class="div-flex-2">
+                                <div class="p-line-clamp"><div class="text-wrapper-17">보건복지부</div></div>
+                                <div class="p-line-clamp-wrapper">
+                                  <div class="p-line-clamp-2">
+                                    <p class="text-wrapper-18">
+                                      [청년신체건강증진서비스] 3개월간 월 24만원 (10% 본인부담)!
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="keyword">
+                              <div class="span-inline-flex"><div class="text-wrapper-11">일상</div></div>
+                              <div class="span-inline-flex-2"><div class="text-wrapper-11">전국</div></div>
+                              <div class="span-inline-flex-3"><div class="text-wrapper-12">정부</div></div>
+                            </div>
+                          </div>
+                          <a href="6" style="cursor: pointer;" class="span-inline-flex-5"><div class="text-wrapper-15">자세히</div></a>
+                        </div>
+                        <div class="figure-wrapper">
+                          <div class="img-wrapper">
+                            <img class="img-2" src="../images/benefit_img/b43a41b7b8334bfea15964756bd6b5fc-png-1.png" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="div-group">
+                      <div class="div-flex">
+                        <div class="div-w-full">
+                          <div class="div-my">
+                            <div class="span-inline-flex-10"><div class="text-wrapper-19">D-10</div></div>
+                            <div class="div-flex-margin">
+                              <div class="div-flex-2">
+                                <div class="p-line-clamp"><div class="text-wrapper-20">한국장학재단</div></div>
+                                <div class="p-line-clamp-wrapper">
+                                  <div class="p-line-clamp-2">
+                                    <p class="text-wrapper-27">
+                                      [국가장학금 I 유형] 소득수준에 연계하여 혜택이 주어지도록 설계
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="span-inline-flex-7"><div class="text-wrapper-11">학업</div></div>
+                            <div class="span-inline-flex-8"><div class="text-wrapper-11">전국</div></div>
+                            <div class="span-inline-flex-9"><div class="text-wrapper-12">정부</div></div>
+                          </div>
+                          <a href="7" style="cursor: pointer;" class="span-inline-flex-5"><div class="text-wrapper-15">자세히</div></a>
+                        </div>
+                        <div class="figure-wrapper">
+                          <div class="img-wrapper">
+                            <img class="img-3" src="../images/benefit_img/1609fc417afc4517acf89c642496d279-jpg-2.png" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="div-group">
+                      <div class="div-flex">
+                        <div class="div-w-full">
+                          <div class="div-my">
+                            <div class="span-inline-flex-10"><div class="text-wrapper-28">D-9</div></div>
+                            <div class="div-flex-margin">
+                              <div class="div-flex-2">
+                                <div class="p-line-clamp"><div class="text-wrapper-20">고용노동부</div></div>
+                                <div class="p-line-clamp-wrapper">
+                                  <div class="p-line-clamp-2">
+                                    <p class="text-wrapper-27">
+                                      [청년일자리 도약장려금] 신규채용 청년 1인당 월 최대 60만원씩!
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="span-inline-flex-7"><div class="text-wrapper-11">취업</div></div>
+                            <div class="span-inline-flex-8"><div class="text-wrapper-11">전국</div></div>
+                            <div class="span-inline-flex-9"><div class="text-wrapper-12">정부</div></div>
+                          </div>
+                          <a href="8" style="cursor: pointer;" class="span-inline-flex-5"><div class="text-wrapper-15">자세히</div></a>
+                        </div>
+                        <div class="figure-wrapper">
+                          <div class="img-wrapper">
+                            <img class="img-2" src="../images/benefit_img/1609fc417afc4517acf89c642496d279-jpg-3.png" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="overlap-wrapper">
+              <div class="overlap-2">
+                <div class="text-wrapper-29">검색어를 입력해주세요</div>
+                <img class="button" src="../images/benefit_img/button.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="footer">
+          <div class="view-8">
+            <div class="div-cl-control">
+              <div class="div-cl-layout">
+                <button class="button-2"><div class="text-wrapper-30">대학인싸</div></button>
+                <button class="button-3"><div class="text-wrapper-30">뉴스레터</div></button>
+                <button class="button-4"><div class="text-wrapper-31">개인정보처리방침</div></button>
+                <button class="button-5"><div class="text-wrapper-30">사이트맵</div></button>
+              </div>
+            </div>
+            <div class="div-cl-layout-2">
+              <div class="div-cl-text"><div class="text-wrapper-32">회사명</div></div>
+              <div class="div-cl-text-2"><div class="text-wrapper-33">주소</div></div>
+              <div class="naver-com-wrapper"><div class="naver-com">dbstn6622@naver.com</div></div>
+              <div class="div-cl-text-3">
+                <p class="text-wrapper-34">16391 수원시 권선구 금곡로 229 로얄펠리스 3차 935호</p>
+              </div>
+              <div class="div-cl-text-4"><div class="text-wrapper-34">(주) 대학인싸</div></div>
+              <div class="div-cl-control-2"><div class="text-wrapper-35">010-1234-5678</div></div>
+            </div>
+          </div>
+          <div class="span-text-sm-5">
+            <div class="text-wrapper-36">© 2023</div>
+            <div class="link-MAYCAN-inc">대학인싸.inc. All Rights Reserved.</div>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>

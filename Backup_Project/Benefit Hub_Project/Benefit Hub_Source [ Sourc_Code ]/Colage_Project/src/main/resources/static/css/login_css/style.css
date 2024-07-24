@@ -1,0 +1,588 @@
+.screen {
+  position: relative;
+  width: 1920px;
+  height: 1080px;
+  background-color: #ffffff;
+}
+
+.screen .footer {
+  position: absolute;
+  width: 1920px;
+  height: 292px;
+  top: 788px;
+  left: 0;
+  background-color: #000000;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-color: #dfdfdf;
+}
+
+.screen .div {
+  position: absolute;
+  width: 936px;
+  height: 215px;
+  top: 12px;
+  left: 492px;
+}
+
+.screen .div-cl-control {
+  width: 936px;
+  height: 24px;
+  top: 54px;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+}
+
+.screen .div-cl-layout {
+  position: relative;
+  width: 968px;
+  height: 24px;
+  top: -32px;
+  left: -32px;
+}
+
+.screen .button {
+  all: unset;
+  box-sizing: border-box;
+  position: absolute;
+  width: 57px;
+  height: 19px;
+  top: 34px;
+  left: 41px;
+}
+
+.screen .text-wrapper {
+  position: absolute;
+  height: 16px;
+  top: 0;
+  left: 0;
+  font-family: "Noto Sans KR", Helvetica;
+  font-weight: 300;
+  color: #ffffff;
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: -0.8px;
+  line-height: 16px;
+  white-space: nowrap;
+}
+
+.screen .div-wrapper {
+  all: unset;
+  box-sizing: border-box;
+  position: absolute;
+  width: 57px;
+  height: 19px;
+  top: 34px;
+  left: 135px;
+}
+
+.screen .button-2 {
+  all: unset;
+  box-sizing: border-box;
+  position: absolute;
+  width: 127px;
+  height: 20px;
+  top: 34px;
+  left: 223px;
+}
+
+.screen .text-wrapper-2 {
+  height: 18px;
+  top: 0;
+  left: 0;
+  font-family: "Noto Sans KR", Helvetica;
+  font-weight: 300;
+  color: #5e5eff;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: -0.9px;
+  line-height: 18px;
+  position: absolute;
+  white-space: nowrap;
+}
+
+.screen .button-3 {
+  all: unset;
+  box-sizing: border-box;
+  position: absolute;
+  width: 57px;
+  height: 19px;
+  top: 34px;
+  left: 380px;
+}
+
+.screen .div-cl-layout-2 {
+  position: absolute;
+  width: 936px;
+  height: 136px;
+  top: 78px;
+  left: 0;
+}
+
+.screen .div-cl-text {
+  width: 100px;
+  height: 16px;
+  top: 64px;
+  position: absolute;
+  left: 0;
+}
+
+.screen .text-wrapper-3 {
+  height: 15px;
+  top: 0;
+  left: 0;
+  font-family: "Noto Sans KR", Helvetica;
+  font-weight: 300;
+  color: #ffffff;
+  font-size: 15px;
+  letter-spacing: -0.75px;
+  line-height: 15px;
+  position: absolute;
+  white-space: nowrap;
+}
+
+.screen .div-cl-text-2 {
+  position: absolute;
+  width: 34px;
+  height: 20px;
+  top: 96px;
+  left: 0;
+}
+
+.screen .text-wrapper-4 {
+  height: 15px;
+  top: 2px;
+  left: 0;
+  font-family: "Noto Sans KR", Helvetica;
+  font-weight: 300;
+  color: #ffffff;
+  font-size: 15px;
+  letter-spacing: -0.75px;
+  line-height: 15px;
+  position: absolute;
+  white-space: nowrap;
+}
+
+.screen .naver-com-wrapper {
+  width: 138px;
+  top: 96px;
+  position: absolute;
+  height: 19px;
+  left: 496px;
+}
+
+.screen .naver-com {
+  position: absolute;
+  width: 155px;
+  height: 15px;
+  top: 1px;
+  left: 16px;
+  font-family: "Noto Sans KR", Helvetica;
+  font-weight: 300;
+  color: #ffffff;
+  font-size: 15px;
+  letter-spacing: -0.75px;
+  line-height: 15px;
+}
+
+.screen .div-cl-text-3 {
+  position: absolute;
+  width: 325px;
+  height: 19px;
+  top: 96px;
+  left: 158px;
+}
+
+.screen .text-wrapper-5 {
+  position: absolute;
+  height: 15px;
+  top: 1px;
+  left: 0;
+  font-family: "Noto Sans KR", Helvetica;
+  font-weight: 300;
+  color: #ffffff;
+  font-size: 15px;
+  letter-spacing: -0.75px;
+  line-height: 15px;
+  white-space: nowrap;
+}
+
+.screen .div-cl-text-4 {
+  position: absolute;
+  width: 82px;
+  height: 19px;
+  top: 64px;
+  left: 158px;
+}
+
+.screen .div-cl-control-2 {
+  width: 150px;
+  top: 66px;
+  position: absolute;
+  height: 19px;
+  left: 496px;
+}
+
+.screen .text-wrapper-6 {
+  position: absolute;
+  height: 15px;
+  top: 1px;
+  left: 18px;
+  font-family: "Noto Sans KR", Helvetica;
+  font-weight: 300;
+  color: #ffffff;
+  font-size: 15px;
+  letter-spacing: -0.75px;
+  line-height: 15px;
+  white-space: nowrap;
+}
+
+.screen .copyright {
+  position: absolute;
+  width: 262px;
+  height: 20px;
+  top: 249px;
+  left: 492px;
+}
+
+.screen .text-wrapper-7 {
+  position: absolute;
+  width: 49px;
+  height: 16px;
+  top: 1px;
+  left: 0;
+  font-family: "Inter", Helvetica;
+  font-weight: 400;
+  color: #6b7280;
+  font-size: 13.2px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 20px;
+  white-space: nowrap;
+}
+
+.screen .link-MAYCAN-inc {
+  position: absolute;
+  width: 210px;
+  height: 16px;
+  top: 1px;
+  left: 52px;
+  font-family: "Inter", Helvetica;
+  font-weight: 400;
+  color: #6b7280;
+  font-size: 13.2px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 20px;
+  white-space: nowrap;
+}
+
+.screen .main {
+  position: absolute;
+  width: 1920px;
+  height: 682px;
+  top: 106px;
+  left: 0;
+}
+
+.screen .overlap-group {
+  position: relative;
+  width: 384px;
+  height: 353px;
+  top: 102px;
+  left: 768px;
+}
+
+.screen .view {
+  position: absolute;
+  width: 384px;
+  height: 351px;
+  top: 0;
+  left: 0;
+}
+
+.screen .heading {
+  position: absolute;
+  width: 384px;
+  height: 36px;
+  top: 0;
+  left: 0;
+}
+
+.screen .text-wrapper-8 {
+  width: 61px;
+  height: 29px;
+  top: 2px;
+  left: 162px;
+  font-family: "Inter", Helvetica;
+  font-weight: 700;
+  color: #111827;
+  font-size: 22.3px;
+  text-align: center;
+  letter-spacing: -0.6px;
+  line-height: 36px;
+  position: absolute;
+  white-space: nowrap;
+}
+
+.screen .form-wrapper {
+  position: absolute;
+  width: 384px;
+  height: 220px;
+  top: 76px;
+  left: 0;
+}
+
+.screen .form {
+  position: relative;
+  height: 220px;
+}
+
+.screen .email {
+  position: absolute;
+  width: 384px;
+  height: 68px;
+  top: 0;
+  left: 0;
+}
+
+.screen .label {
+  position: absolute;
+  width: 384px;
+  height: 24px;
+  top: 0;
+  left: 0;
+}
+
+.screen .text-wrapper-9 {
+  width: 37px;
+  height: 16px;
+  top: 3px;
+  left: 0;
+  font-family: "Inter", Helvetica;
+  font-weight: 500;
+  color: #111827;
+  font-size: 13.1px;
+  letter-spacing: 0;
+  line-height: 24px;
+  position: absolute;
+  white-space: nowrap;
+}
+
+.screen .input {
+  position: absolute;
+  width: 384px;
+  height: 36px;
+  top: 32px;
+  left: 0;
+  background-color: #ffffff;
+  border-radius: 6px;
+  border: 1px solid;
+  border-color: #00000080;
+}
+
+.screen .password {
+  position: absolute;
+  width: 384px;
+  height: 68px;
+  top: 92px;
+  left: 0;
+}
+
+.screen .label-2 {
+  position: relative;
+  width: 48px;
+  height: 24px;
+}
+
+.screen .text-wrapper-10 {
+  width: 49px;
+  height: 16px;
+  top: 3px;
+  left: 0;
+  font-family: "Inter", Helvetica;
+  font-weight: 500;
+  color: #111827;
+  font-size: 13.1px;
+  letter-spacing: 0;
+  line-height: 24px;
+  position: absolute;
+  white-space: nowrap;
+}
+
+.screen .button-4 {
+  all: unset;
+  box-sizing: border-box;
+  position: absolute;
+  width: 384px;
+  height: 60px;
+  top: 184px;
+  left: 0;
+  background-color: #4c55e5;
+  border-radius: 6px;
+  box-shadow: 0px 2px 2px #00000033;
+}
+
+.screen .text-wrapper-11 {
+  width: 37px;
+  height: 16px;
+  top: 203px;
+  left: 174px;
+  font-family: "Inter", Helvetica;
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 13.1px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 24px;
+  position: absolute;
+  white-space: nowrap;
+}
+
+.screen .link {
+  position: absolute;
+  width: 52px;
+  height: 16px;
+  top: 445px;
+  left: 1100px;
+  font-family: "Inter", Helvetica;
+  font-weight: 600;
+  color: #000000;
+  font-size: 13.1px;
+  letter-spacing: 0;
+  line-height: 20px;
+  white-space: nowrap;
+}
+
+.screen .link_serh {
+  position: absolute;
+  width: 52px;
+  height: 16px;
+  top: 445px;
+  left: 773px;
+  font-family: "Inter", Helvetica;
+  font-weight: 600;
+  color: #000000;
+  font-size: 13.1px;
+  letter-spacing: 0;
+  line-height: 20px;
+  white-space: nowrap;
+}
+
+.screen .navigation {
+  position: absolute;
+  width: 1918px;
+  height: 106px;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  box-shadow: 0px 1px 2px #0000000d;
+}
+
+.screen .navbar {
+  position: absolute;
+  width: 639px;
+  height: 50px;
+  top: 31px;
+  left: 365px;
+}
+
+.screen .item {
+  left: 519px;
+  position: absolute;
+  height: 50px;
+  top: -1px;
+  font-family: "Noto Sans KR", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 22px;
+  letter-spacing: -1.1px;
+  line-height: 50px;
+  white-space: nowrap;
+}
+
+.screen .item-2 {
+  left: 415px;
+  position: absolute;
+  height: 50px;
+  top: -1px;
+  font-family: "Noto Sans KR", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 22px;
+  letter-spacing: -1.1px;
+  line-height: 50px;
+  white-space: nowrap;
+}
+
+.screen .item-3 {
+  left: 292px;
+  position: absolute;
+  height: 50px;
+  top: -1px;
+  font-family: "Noto Sans KR", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 22px;
+  letter-spacing: -1.1px;
+  line-height: 50px;
+  white-space: nowrap;
+}
+
+.screen .item-4 {
+  left: 123px;
+  position: absolute;
+  height: 50px;
+  top: -1px;
+  font-family: "Noto Sans KR", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 22px;
+  letter-spacing: -1.1px;
+  line-height: 50px;
+  white-space: nowrap;
+}
+
+.screen .item-5 {
+  left: 0;
+  position: absolute;
+  height: 50px;
+  top: -1px;
+  font-family: "Noto Sans KR", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 22px;
+  letter-spacing: -1.1px;
+  line-height: 50px;
+  white-space: nowrap;
+}
+
+.screen .link-2 {
+  position: absolute;
+  width: 67px;
+  height: 38px;
+  top: 35px;
+  left: 1483px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid;
+  border-color: #d1d5db;
+  box-shadow: 0px 1px 2px #0000000d;
+}
+
+.screen .text-wrapper-12 {
+  width: 42px;
+  height: 19px;
+  top: 8px;
+  left: 10px;
+  font-family: "Inter", Helvetica;
+  font-weight: 500;
+  color: #374151;
+  font-size: 15px;
+  letter-spacing: 0;
+  line-height: 24px;
+  position: absolute;
+  white-space: nowrap;
+}

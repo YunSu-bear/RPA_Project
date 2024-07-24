@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="/css/login_css/globals.css" />
+    <link rel="stylesheet" href="/css/login_css/style.css" />
+  </head>
+  <div>
+    <div class="screen">
+		<div class="navigation">
+		  <div class="navbar">
+			<div class="item-3" style="cursor: pointer;"onclick="location.href='Community/List'">갓생은 첨이라</div>
+			<div class="item-4" style="cursor: pointer;"onclick="location.href='Benefit/List'">혜택 및 지원금</div>
+			<div class="item-5" style="cursor: pointer;"onclick="location.href='Main'">홈페이지</div>
+		  </div>
+		  <div class="link-2" style="cursor: pointer;"onclick="location.href='welcome'"><div class="text-wrapper-12">로그인</div></div>
+		</div>
+      <div class="main">
+        <div class="overlap-group">
+          <div class="view">
+            <div class="heading"><div class="text-wrapper-8">로그인</div></div>
+            <div class="form-wrapper">
+              <form action="/login" method="post" class="form">
+                <div class="email">
+                  <div class="label"><div class="text-wrapper-9">아이디</div></div>
+                  <input name="username" class="input">
+                </div>
+                <div class="password">
+                  <div class="label">
+                    <div class="label-2"><div class="text-wrapper-10">비밀번호</div></div>
+                  </div>
+                  <input name="password" type="password" class="input">
+                </div>
+                <input type="button" onclick="sub()" class="button-4" style="cursor: pointer;">
+					<div class="text-wrapper-11" onclick="sub()" style="cursor: pointer;">로그인</div>
+			    </form></div>
+            </div>
+          </div>
+          <div class="link"><a href="Join/join" style="cursor: pointer;" >회원가입</a></div>
+          <div class="link_serh"><a href="/login/serh" style="cursor:pointer;">계정을 잃어버리셨나요?</a></div>
+        </div>
+	  <div class="footer">
+	    <div class="div">
+	      <div class="div-cl-control">
+	        <div class="div-cl-layout">
+	          <div class="button"><div class="text-wrapper">대학인싸</div></div>
+	          <div class="div-wrapper"><div class="text-wrapper">뉴스레터</div></div>
+	          <div class="button-2"><div class="text-wrapper-2">개인정보처리방침</div></div>
+	          <div class="button-3"><div class="text-wrapper">사이트맵</div></div>
+	        </div>
+	      </div>
+	      <div class="div-cl-layout-2">
+	        <div class="div-cl-text"><div class="text-wrapper-3">회사명</div></div>
+	        <div class="div-cl-text-2"><div class="text-wrapper-4">주소</div></div>
+	        <div class="naver-com-wrapper"><div class="naver-com">dbstn6622@naver.com</div></div>
+	        <div class="div-cl-text-3">
+	          <p class="text-wrapper-5">16391 수원시 권선구 금곡로 229 로얄펠리스 3차 935호</p>
+	        </div>
+	        <div class="div-cl-text-4"><div class="text-wrapper-5">(주) 대학인싸</div></div>
+	        <div class="div-cl-control-2"><div class="text-wrapper-6">010-1234-5678</div></div>
+	      </div>
+	    </div>
+	    <div class="copyright">
+	      <div class="text-wrapper-7">© 2023</div>
+	      <div class="link-MAYCAN-inc">대학인싸.inc. All Rights Reserved.</div>
+	    </div>
+	  </div>
+    </div>
+	</div>
+  	<script>
+		  	function sub(){
+		  		document.forms[0].submit();
+		  	}
+	</script>
+  </body>
+</html>

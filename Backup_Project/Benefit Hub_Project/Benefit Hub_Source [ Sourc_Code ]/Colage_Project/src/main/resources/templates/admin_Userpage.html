@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="/css/Main_css/globals.css" />
+    <link rel="stylesheet" href="/css/admin_css/Style.css" />
+  </head>
+  <body>
+    <div class="div-wrapper">
+      <div class="div">
+        <div class="overlap">
+          <div class="navigation">
+            <div class="navbar">
+              <div th:if="${user eq 'admin'}">
+				<div class="text-wrapper" Style="cursor: pointer;" onclick="location.href='admin_Userpage'">관리자 페이지</div>
+			  </div>
+              <div style="cursor:pointer;" onclick="location.href='../Community/List'" class="item-2">갓생은 첨이라</div>
+              <div style="cursor:pointer;" onclick="location.href='../Benefit/List'" class="item-3">혜택 및 지원금</div>
+              <div style="cursor:pointer;" onclick="location.href='../Main'" class="item-4">홈페이지</div>
+            </div>
+            <div class="view">
+              <button class="button">환영합니다&nbsp;[[${user}]]</button>
+              <a href="/logout" class="button" style="cursor:pointer;">로그아웃</a>
+              <img onclick="location.href='/Mypage'" style="cursor: pointer;" class="vector" src="/images/benefit_img/vector-4.svg" />
+            </div>
+          </div>
+          <div class="main">
+            <div class="view-2">
+              <div class="div-row">
+                <div class="div-card">
+                  <div class="div-card-head">
+                    <header class="header"><div class="text-wrapper-2">회원정보</div></header>
+                  </div>
+                      <div class="list-item-link-wrapper">
+                        <div class="list-item-link">
+                          <div class="text-wrapper-6">회원 관리</div>
+                          <div class="div-card-2">
+                            <div class="list-item-link-2"><div class="text-wrapper-7">커뮤니티 게시물</div></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="list">
+                    <div class="div-checkbox-wrapper">
+                    	<div class="div-checkbox"><div class="label"></div></div>
+                    </div>
+                    <div class="item-6"><div class="text-wrapper-4">아이디</div></div>
+                    <div class="item-7">
+                      <div class="text-wrapper-5">비밀번호</div>
+                    <div class="item-8"><div class="text-wrapper-8">닉네임</div></div>
+                    <div class="overlap-3">
+                      <div class="item-9"><div class="text-wrapper-9">주민번호 앞</div></div>
+                      <div class="item-10"><div class="text-wrapper-10">주민번호 뒤</div></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="frame">
+                <div class="overlap-4">
+                  <div class="div-card-3">
+                    <div onclick="location.href='admin_Postpage'" style="cursor:pointer;" class="list-item-link-3"><div class="text-wrapper-7">커뮤니티 게시물</div></div>
+                  </div>
+                  <div onclick="location.href='admin_Userpage'" style="cursor:pointer;" class="div-card-4"><div class="text-wrapper-11">회원 관리</div></div>
+                  <div class="list-item-link-4"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <form id="editForm" action="editForm" method="post">
+	      	<table th:each="users : ${A}" class="datas">
+	        	<tr>
+	            	<td class ="chk" ><input type="checkbox" name="B" th:value=${users.u_num}></td>
+		            <td class="num" th:text="${users.u_num}"></td>
+		            <td class="id" th:text="${users.u_id}"></td>
+		            <td th:text="${users.u_pw}"></td>
+		            <td th:text="${users.u_nm}"></td>
+		            <td th:text="${users.u_sec_n1}"></td>
+		            <td th:text="${users.u_sec_n2}"></td>
+		        </tr>
+	        </table>
+	        <button onclick="edit_action('edit')" style="cursor:pointer;" class="overlap-group-2"><div class="text-wrapper-3">회원수정</div></button>
+            <button onclick="edit_action('del')" style="cursor:pointer;" class="overlap-2"><div class="text-wrapper-3">회원삭제</div></button>
+	      </form>
+        <div class="footer">
+          <div class="footer-2">
+            <div class="div-cl-control">
+              <div class="div-cl-layout">
+                <button class="button-2"><div class="text-wrapper-12">대학인싸</div></button>
+                <button class="button-3"><div class="text-wrapper-12">뉴스레터</div></button>
+                <button class="button-4"><div class="text-wrapper-13">개인정보처리방침</div></button>
+                <button class="button-5"><div class="text-wrapper-12">사이트맵</div></button>
+              </div>
+            </div>
+            <div class="div-cl-layout-2">
+              <div class="div-cl-text"><div class="text-wrapper-14">회사명</div></div>
+              <div class="div-cl-text-2"><div class="text-wrapper-15">주소</div></div>
+              <div class="naver-com-wrapper"><div class="naver-com">dbstn6622@naver.com</div></div>
+              <div class="div-cl-text-3">
+                <p class="text-wrapper-16">16391 수원시 권선구 금곡로 229 로얄펠리스 3차 935호</p>
+              </div>
+              <div class="div-cl-text-4"><div class="text-wrapper-16">(주) 대학인싸</div></div>
+              <div class="div-cl-control-2"><div class="text-wrapper-17">010-1234-5678</div></div>
+            </div>
+          </div>
+          <div class="copyright">
+            <div class="text-wrapper-18">© 2023</div>
+            <div class="link-MAYCAN-inc">대학인싸.inc. All Rights Reserved.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+    function edit_action(action) {
+        var form = document.getElementById('editForm');
+        var actionInput = document.createElement('input');
+        actionInput.type = 'hidden';
+        actionInput.name = 'action';
+        
+        if (action === 'edit') { actionInput.value = 'edit'; form.action = 'edit_action_u'; } // 수정 액션에 대한 엔드포인트 설정 
+        else if (action === 'del') { actionInput.value = 'del'; form.action = 'delete_action_u'; } // 삭제 액션에 대한 엔드포인트 설정
+        
+        form.appendChild(actionInput);
+        
+        form.submit(); }
+    </script>
+  </body>
+</html>
+
+

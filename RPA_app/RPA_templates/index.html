@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type=text/css href="{% static 'css/index.css' %}">
+    <title>사출 계산 사이트 </title>
+    <script>
+        var detailPageUrl = "{% url 'detail_page' %}";
+    </script>
+    <script src="{% static 'js/index.js' %}" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="caption-container">사출 원가표</div>
+        <table>
+            <div class="button-container">
+                <span>※ 데이터를 클릭하시면 견적서를 작성하실 수 있습니다</span>
+                <button><a href="{% url 'input_page' %}">저장하기</a></button>
+                <button><a href="{% url 'delete_page' %}">삭제하기</a></button>
+                <button><a href="{% url 'view_index' %}">계산서보기</a></button>
+            </div>
+            <thead>
+                <tr>
+                    <th>&nbsp;</th>
+                    <th>금형변호</th>
+                    <th>품명</th>
+                    <th>재질</th>
+                    <th>그레이드</th>
+                    <th>제품중량(g)</th>
+                    <th>S/R중량(g)</th>
+                    <th>설비톤수</th>
+                    <th>Cav.</th>
+                    <th>C/T (sec.)</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in data %}
+                <tr
+                    data-data-number="{{ item.Data_Number }}"
+                    data-mold-number="{{ item.Mold_Number }}"
+                    data-product-name="{{ item.Product_Name }}"
+                    data-texture="{{ item.Texture }}"
+                    data-grade="{{ item.Grade }}"
+                    data-product-weight="{{ item.Product_Weight }}"
+                    data-sr-weight="{{ item.SR_Weight }}"
+                    data-bright-tone="{{ item.Bright_tone }}"
+                    data-cav="{{ item.Cav }}"
+                    data-c-t="{{ item.C_T }}">
+                    <td>{{ item.Data_Number }}</td>
+                    <td>{{ item.Mold_Number }}</td>
+                    <td>{{ item.Product_Name }}</td>
+                    <td>{{ item.Texture }}</td>
+                    <td>{{ item.Grade }}</td>
+                    <td>{{ item.Product_Weight }}</td>
+                    <td>{{ item.SR_Weight }}</td>
+                    <td>{{ item.Bright_tone }}</td>
+                    <td>{{ item.Cav }}</td>
+                    <td>{{ item.C_T }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

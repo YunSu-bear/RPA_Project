@@ -1,0 +1,59 @@
+.table-container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-bottom: 20px;
+    border-radius: 5px 5px 0 0;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    border: 1px solid #000;
+    text-align: center;
+}
+th, td {
+    border: 1px solid #000;
+    padding: 0; /* 패딩을 0으로 설정하여 공간을 최대로 활용 */
+}
+th {
+    background-color: #808080c1;
+}
+.btn-container {
+    text-align: center;
+    margin-top: 20px;
+}
+.btn-download {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn-download:hover {
+    background-color: #45a049;
+}
+input, select, textarea {
+    width: 100%;
+    box-sizing: border-box; /* padding과 border를 너비에 포함 */
+    margin: 0; /* 마진을 0으로 설정 */
+    padding: 5px; /* 필요에 따라 패딩을 추가 */
+    border: 1px solid #ccc; /* 기본 테두리 설정 */
+    height: 100%; /* 높이를 100%로 설정하여 셀을 채움 */
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../css/Community_css/List/globals.css" />
+    <link rel="stylesheet" href="../css/Community_css/List/style.css" />
+    <link rel="stylesheet" href="../../css/Community_css/List/style.css" />
+  </head>
+  <body>
+    <div class="screen">
+		<div class="navigation">
+				  <div class="navbar">
+				  	<div th:if="${user eq 'admin'}">
+						<div class="text-wrapper" Style="cursor: pointer;" onclick="location.href='../admin_Userpage'">관리자 페이지</div>
+					</div>
+					<div class="div" style="cursor: pointer;"onclick="location.href='List'">갓생은 첨이라</div>
+					<div class="item-2" style="cursor: pointer;"onclick="location.href='../Benefit/List'">혜택 및 지원금</div>
+					<div class="item-3" style="cursor: pointer;"onclick="location.href='../Main'">홈페이지</div>
+				  </div>
+				  <div th:if="${user != null}">
+				  	<div class="view">
+				  		<button class="button">환영합니다&nbsp;[[${user}]]</button>
+				  		<a href="/logout" class="button" style="cursor: pointer;">로그아웃</a>
+				  		<img onclick="location.href='../Mypage'" style="cursor: pointer;" class="vector" src="/images/benefit_img/vector-4.svg" />
+				  	</div>
+				  </div>
+				  <div th:if="${user == null}">
+				  	<div class="link-ts" style="cursor: pointer;" onclick="location.href='/login_wel'">
+				  		<div class="text-wrapper-ts">로그인</div>
+				  	</div>
+				  </div>
+				      </div>
+				      <div class="main">
+				        <div class="overlap-group-wrapper">
+				          <div class="overlap-group">
+				          	<div class="overlap-group-1">
+				            <div class="text-wrapper-2">검색어를 입력해주세요</div>
+				            <img class="img" src="../images/comu_img/button.png" />
+				          </div>
+				        </div>
+				        </div>
+						<!-- 공지사항 게시글 -->
+				        <div onclick="location.href='noice'" style="cursor: pointer;" class="link-6">
+				          <div class="div-order">
+				            <div class="div-2">
+				              <div class="p-text-xs"><div class="text-wrapper-3">5일 전</div></div>
+				              <div class="div-space-x">
+				                <div class="span-inline-flex"><div class="text-wrapper-4">공지사항</div></div>
+				              </div>
+				            </div>
+				            <div class="div-wrapper-2"><p class="p">2023 서울 ‘청년 을 위한 일주일’ 행사 개최</p></div>
+				            <div class="p-mt">
+				              <p class="text-wrapper-5">
+				                서울청년주간이 ‘서울 청년을 위한 일주일‘이라는 이름으로 여러분들을 찾아옵니다.
+				              </p>
+				            </div>
+				            <img class="vector-2" src="../images/comu_img/vector.png" />
+				            <div class="p-text-sm"><div class="text-wrapper-6">관리자</div></div>
+				          </div>
+				        </div>
+						<!-- 추가 게시글 -->
+						<div th:each="post : ${posts}">
+							<div th:onclick="|location.href='@{Post(num=${post.get_post_num})}'|" style="cursor: pointer;" class="link-6">
+								<div class="div-order">
+									<div class="div-2">
+										<div class="p-text-xs"><div class="text-wrapper-3" th:text="${post.get_time}"></div></div>
+									</div>
+									<div class="div-wrapper-2"><p class="p"	th:text="${post.get_title}"></p></div>
+										<div class="p-mt">
+											<p class="text-wrapper-5" th:text="${post.get_chat}"></p>
+										</div>
+										<img class="vector-2" src="../images/comu_img/vector.png" />
+										<div class="p-text-sm"><div class="text-wrapper-6" th:text="${post.get_post_user}"></div></div>
+								</div>
+							</div>
+						</div>
+					<button onclick="location.href='Writing'" style="cursor: pointer;" class="button-2"><div class="text-wrapper-13">글쓰기</div></button>
+				      <div class="footer">
+				        <div class="footer-2">
+				          <div class="div-cl-control">
+				            <div class="div-cl-layout">
+				              <button class="button-3"><div class="text-wrapper-15">대학인싸</div></button>
+				              <button class="button-4"><div class="text-wrapper-15">뉴스레터</div></button>
+				              <button class="button-5"><div class="text-wrapper-16">개인정보처리방침</div></button>
+				              <button class="button-6"><div class="text-wrapper-15">사이트맵</div></button>
+				            </div>
+				          </div>
+				          <div class="div-cl-layout-2">
+				            <div class="div-cl-text"><div class="text-wrapper-17">회사명</div></div>
+				            <div class="div-cl-text-2"><div class="text-wrapper-18">주소</div></div>
+				            <div class="naver-com-wrapper"><div class="naver-com">dbstn6622@naver.com</div></div>
+				            <div class="div-cl-text-3">
+				              <p class="text-wrapper-19">16391 수원시 권선구 금곡로 229 로얄펠리스 3차 935호</p>
+				            </div>
+				            <div class="div-cl-text-4"><div class="text-wrapper-19">(주) 대학인싸</div></div>
+				            <div class="div-cl-control-2"><div class="text-wrapper-20">010-1234-5678</div></div>
+				          </div>
+				        </div>
+				        <div class="copyright">
+				          <div class="text-wrapper-21">© 2023</div>
+				          <div class="link-MAYCAN-inc">대학인싸.inc. All Rights Reserved.</div>
+				        </div>
+				      </div>
+				    </div>
+				  </body>
+				</html>

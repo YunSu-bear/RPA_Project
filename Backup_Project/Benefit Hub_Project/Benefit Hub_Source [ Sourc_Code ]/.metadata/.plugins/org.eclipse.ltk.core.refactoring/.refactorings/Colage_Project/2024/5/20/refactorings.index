@@ -1,0 +1,46 @@
+1715524322463	Rename package 'com.Java.Funct.cfg'
+1715524349673	Rename type 'UserController'
+1715524918956	Rename package 'com.Java.Funct.dto'
+1715524934413	Rename package 'com.Java.Funct.DB_Util'
+1715524980825	Rename package 'com.Java.Funct.DB'
+1715525005850	Rename package 'com.Java.Funct.DTO'
+1715526564356	Rename package 'com.Java.Funct.cont'
+1715526574706	Rename package 'com.Java.Funct.dto_Util'
+1715526591184	Rename package 'com.Java.Funct'
+1715526605727	Copy packages
+1715526612408	Copy package
+1715526619267	Delete elements
+1715526640327	Move compilation unit
+1715526644140	Delete element
+1715526736870	Delete element
+1715526742817	Delete element
+1715526746143	Delete element
+1715526768546	Rename package 'com.Java.Funct.Dto_Util'
+1715527203798	Move files
+1715527294476	Move files
+1715527320578	Move files
+1715527342228	Move files
+1715528116645	Move file
+1715528415534	Rename resource 'Admin'
+1715528994489	Rename resource 'adminpage'
+1715529101250	Move files
+1715529103827	Delete element
+1715529784563	Move file
+1715529850517	Rename type 'Web_Control_login'
+1715530002660	Rename resource 'join'
+1715530709779	Move file
+1715530714897	Move files
+1715530719558	Delete element
+1715530721165	Delete element
+1715530726210	Move files
+1715530728367	Delete element
+1715530805257	Move file
+1715558574460	Move file
+1715559340356	Move file
+1715559499453	Move file
+1715559595543	Rename type 'Web_Control_login_join'
+1715560655361	Move 3 resources to 'Mypage'
+1715560657031	Move 'edit_action.html' to 'Mypage'
+1715564198860	Delete element
+1715564341539	Rename resource 'login_suc.html'
+1715566575880	Rename resource 'noice.html'

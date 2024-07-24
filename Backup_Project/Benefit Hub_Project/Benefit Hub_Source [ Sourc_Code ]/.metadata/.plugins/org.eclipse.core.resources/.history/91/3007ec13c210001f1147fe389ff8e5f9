@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+	<link rel="stylesheet" href="../css/Benefit_css/Content/globals.css" />
+	<link rel="stylesheet" href="../css/Benefit_css/Content/style6.css" />
+  </head>
+  <body>
+    <div class="screen">
+      <div class="div">
+        <div class="navigation">
+          <div class="navbar">
+          	<div th:if="${user eq 'admin'}">
+						<div class="text-wrapper" Style="cursor: pointer;" onclick="location.href='../admin_Userpage'">관리자 페이지</div>
+			</div>
+			<div class="item-2" style="cursor: pointer" onclick="location.href='../Community/List'">갓생은 첨이라</div>
+			<div class="item-3"	style="cursor: pointer;"onclick="location.href='/Benefit/List'">혜택 및 지원금</div>
+		    <div class="item-4"	style="cursor: pointer;"onclick="location.href='/Main'">홈페이지</div>
+          </div>
+		  <div class="view">
+		  	<button class="button">환영합니다&nbsp;[[${user}]]</button>
+		  	<a href="/logout" class="button" style="cursor: pointer;">로그아웃</a>
+		  	<img onclick="location.href='../Mypage'" style="cursor: pointer;" class="vector" src="../images/benefit_img/vector-4.svg" />
+		  </div>
+        </div>
+        <div class="main">
+          <div class="div-board-head">
+            <div class="overlap-group">
+              <div class="heading">청년신체건강증진서비스</div>
+              <div class="span-inline-flex"><div class="text-wrapper-2">D-20</div></div>
+            </div>
+            <div class="span-board-sub-tit">
+              <div class="span-board-date"><div class="text-wrapper-3">2023.9.14</div></div>
+              <div class="span-writer">
+                <div class="pseudo"></div>
+                <div class="text-wrapper-4">보건복지부</div>
+              </div>
+            </div>
+          </div>
+          <img class="p" src="../images/benefit_img/content/6-6.png">
+          <div class="overlap">
+            <div class="div-fund-detail">
+              <div class="heading-2">정책소개</div>
+              <div class="div-contents-box">
+                <p class="strong">
+                  지역별 청년사회서비스 사업단을 구성하여 지역 청년이 주체가 되어 지역 사회서비스를<br />제공함으로써
+                  청년의 사회활동 참여 기회 보장과 지역주민 삶의 질을 향상시킵니다.
+                </p>
+              </div>
+            </div>
+            <div class="div-fund-detail-2">
+              <div class="heading-3">정책내용</div>
+              <div class="descriptions">
+                <div class="div-hd-ed">
+                  <div class="term">지원내용</div>
+                  <div class="details">
+                    <p class="div-2">
+                      <span class="span">[운동 및 건강 프로그램]<br /></span>
+                      <span class="text-wrapper-5"
+                        >-유산소, 근력향상, 체력증진 등 개인 맞춤형 운동처방<br />-운동처방에 따른 제공인력의 직접
+                        지도하에 정기적 운동 실시<br />-식단 관리 및 영양 지도<br />-자세 ▪ 체형교정 운동</span
+                      >
+                    </p>
+                  </div>
+                </div>
+                <div class="div-hd-bcd">
+                  <div class="term-2">지원대상</div>
+                  <div class="BMI-wrapper">
+                    <p class="BMI">BMI 지수가 23이상 18.5미만인 과체중 또는 저체중 만 19세에서<br />34세 청년</p>
+                  </div>
+                </div>
+                <div class="div-hd-fdfdd">
+                  <div class="term-3">신청방법</div>
+                  <div class="details"><p class="text-wrapper-6">주민등록상 거주지 동 행정복지센터 직접 방문</p></div>
+                </div>
+                <div class="div-full">
+                  <div class="term-4">제출서류</div>
+                  <div class="div-wrapper"><div class="text-wrapper-7">신분증, 검사지</div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img class="banner" src="../images/benefit_img/content/banner.png" />
+        <footer class="footer">
+          <div class="view-2">
+            <div class="div-cl-control">
+              <div class="div-cl-layout">
+                <button class="button-3"><div class="text-wrapper-9">대학인싸</div></button>
+                <button class="button-4"><div class="text-wrapper-9">뉴스레터</div></button>
+                <button class="button-5"><div class="text-wrapper-10">개인정보처리방침</div></button>
+                <button class="button-6"><div class="text-wrapper-9">사이트맵</div></button>
+              </div>
+            </div>
+            <div class="div-cl-layout-2">
+              <div class="div-cl-text"><div class="text-wrapper-11">회사명</div></div>
+              <div class="div-cl-text-2"><div class="text-wrapper-12">주소</div></div>
+              <div class="naver-com-wrapper"><div class="naver-com">dbstn6622@naver.com</div></div>
+              <div class="div-cl-text-3">
+                <p class="text-wrapper-13">16391 수원시 권선구 금곡로 229 로얄펠리스 3차 935호</p>
+              </div>
+              <div class="div-cl-text-4"><div class="text-wrapper-13">(주) 대학인싸</div></div>
+              <div class="div-cl-control-2"><div class="text-wrapper-14">010-1234-5678</div></div>
+            </div>
+          </div>
+          <div class="span-text-sm">
+            <div class="text-wrapper-15">© 2023</div>
+            <div class="link-MAYCAN-inc">대학인싸.inc. All Rights Reserved.</div>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>

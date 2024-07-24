@@ -1,0 +1,48 @@
+--  사출 원가 테이블
+CREATE TABLE IF NOT EXISTS Inje_Cost ( 
+    Data_Number INT AUTO_INCREMENT PRIMARY KEY,
+    Mold_Number VARCHAR(50) NOT NULL,
+    Product_Name VARCHAR(50) NOT NULL,
+    Texture VARCHAR(50) NOT NULL,
+    Grade VARCHAR(50) NOT NULL,
+    Product_Weight INT NOT NULL,
+    SR_Weight INT NOT NULL,
+    B_Gross_Weight FLOAT,
+    B_Raw_Material_Price INT,
+    B_Raw_Material_Cost FLOAT,
+    Bright_tone FLOAT NOT NULL,
+    Cav INT NOT NULL,
+    C_T INT NOT NULL,
+    B_Daily_Production INT,
+    B_Facility_Utilization_Rate FLOAT,
+    B_Per_Unit_Utilization_Cost FLOAT,
+    B_Per_Unit_Cost FLOAT,
+    B_General_Management_Cost FLOAT,
+    B_Defective_Loss FLOAT,
+    B_Corporate_Profit FLOAT,
+    B_Sum_Cost FLOAT
+);
+-- 사용자 입력 테이블 
+CREATE TABLE IF NOT EXISTS Inje_Cost_Bile (
+    Bile_ID INT AUTO_INCREMENT PRIMARY KEY,
+    Bile_Data_Number INT NOT NULL,
+    Injection_Equipment VARCHAR(50),
+    Extraction_Method VARCHAR(50),
+    Operating_Time VARCHAR(50),
+    Packaging_Method VARCHAR(50),
+    Date_of_Preparation DATE,
+    Specification VARCHAR(50),
+    Raw_Materials_Used VARCHAR(50),
+    Process_Name VARCHAR(50),
+    Remarks_1 VARCHAR(255),
+    Remarks_2 VARCHAR(255),
+    Remarks_3 VARCHAR(255),
+    Remarks_4 VARCHAR(255),
+    Remarks_5 VARCHAR(255),
+    General_Management_Rate INT NOT NULL,
+    Defective_Rate INT NOT NULL,
+    Profit_Rate INT NOT NULL,
+    Other VARCHAR(255),
+    Final_Estimate INT,
+    Supplier_Estimate INT
+);

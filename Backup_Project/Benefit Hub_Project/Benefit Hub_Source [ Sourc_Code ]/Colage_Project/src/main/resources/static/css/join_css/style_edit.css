@@ -1,0 +1,636 @@
+.element {
+  position: relative;
+  width: 1920px;
+  height: 1080px;
+  background-color: #ffffff;
+}
+
+.element .main {
+  position: absolute;
+  width: 1920px;
+  height: 974px;
+  top: 106px;
+  left: 0;
+}
+
+.element .overlap-group {
+  position: relative;
+  height: 974px;
+}
+
+.element .view {
+  position: absolute;
+  width: 384px;
+  height: 693px;
+  top: 0;
+  left: 770px;
+}
+
+.element .text-wrapper {
+  position: absolute;
+  width: 81px;
+  height: 29px;
+  top: 47px;
+  left: 152px;
+  font-family: "Inter", Helvetica;
+  font-weight: 700;
+  color: #111827;
+  font-size: 22.3px;
+  text-align: center;
+  letter-spacing: -0.6px;
+  line-height: 36px;
+  white-space: nowrap;
+}
+
+.element .form-wrapper {
+  height: 849px;
+  top: 76px;
+  position: absolute;
+  width: 384px;
+  left: 0;
+}
+
+.element .form {
+  position: relative;
+  width: 396px;
+  height: 581px;
+  left: -6px;
+}
+
+.element .div-mt {
+  position: relative;
+  width: 384px;
+  height: 568px;
+  top: 20px;
+  left: 6px;
+}
+
+.element .div {
+  height: 68px;
+  top: 0;
+  position: absolute;
+  width: 384px;
+  left: 0;
+}
+
+.element .label {
+  position: absolute;
+  width: 384px;
+  height: 24px;
+  top: 0;
+  left: 0;
+}
+
+.element .text-wrapper-2 {
+  width: 37px;
+  height: 16px;
+  top: 3px;
+  left: 0;
+  font-family: "Inter", Helvetica;
+  font-weight: 500;
+  color: #111827;
+  font-size: 13.1px;
+  letter-spacing: 0;
+  line-height: 24px;
+  position: absolute;
+  white-space: nowrap;
+}
+
+.element .input {
+  position: absolute;
+  width: 384px;
+  height: 36px;
+  top: 32px;
+  left: 0;
+  background-color: #ffffff;
+  border-radius: 6px;
+  border: 1px solid;
+  border-color: #00000080;
+}
+
+.element .view-2 {
+  height: 68px;
+  top: 100px;
+  position: absolute;
+  width: 384px;
+  left: 0;
+}
+
+.element .text-wrapper-3 {
+  position: absolute;
+  width: 49px;
+  height: 16px;
+  top: 3px;
+  left: 0;
+  font-family: "Inter", Helvetica;
+  font-weight: 500;
+  color: #111827;
+  font-size: 13.1px;
+  letter-spacing: 0;
+  line-height: 24px;
+  white-space: nowrap;
+}
+
+.element .view-3 {
+  height: 68px;
+  top: 200px;
+  position: absolute;
+  width: 384px;
+  left: 0;
+}
+
+.element .text-wrapper-4 {
+  width: 76px;
+  height: 16px;
+  top: 3px;
+  left: 0;
+  font-family: "Inter", Helvetica;
+  font-weight: 500;
+  color: #111827;
+  font-size: 13.1px;
+  letter-spacing: 0;
+  line-height: 24px;
+  position: absolute;
+  white-space: nowrap;
+}
+
+.element .view-4 {
+  height: 68px;
+  top: 300px;
+  position: absolute;
+  width: 384px;
+  left: 0;
+}
+
+.element .text-wrapper-5 {
+  width: 24px;
+  height: 16px;
+  top: 3px;
+  left: 0;
+  font-family: "Inter", Helvetica;
+  font-weight: 500;
+  color: #111827;
+  font-size: 13.2px;
+  letter-spacing: 0;
+  line-height: 24px;
+  position: absolute;
+  white-space: nowrap;
+}
+
+.element .view-5 {
+  height: 68px;
+  top: 400px;
+  position: absolute;
+  width: 384px;
+  left: 0;
+}
+
+.element .input-2 {
+  left: 0;
+  position: absolute;
+  width: 185px;
+  height: 36px;
+  top: 32px;
+  background-color: #ffffff;
+  border-radius: 6px;
+  border: 1px solid;
+  border-color: #00000080;
+}
+
+.element .input-3 {
+  left: 199px;
+  position: absolute;
+  width: 185px;
+  height: 36px;
+  top: 32px;
+  background-color: #ffffff;
+  border-radius: 6px;
+  border: 1px solid;
+  border-color: #00000080;
+}
+
+.element .line {
+  position: absolute;
+  width: 8px;
+  height: 1px;
+  top: 50px;
+  left: 188px;
+  object-fit: cover;
+}
+
+.element .button-wrapper {
+  height: 56px;
+  top: 501px;
+  position: absolute;
+  width: 384px;
+  left: 0;
+   background-color: #4c55e5;
+  border-radius: 4px;
+  box-shadow: 0px 2px 2px #00000033;
+}
+
+.element .text-wrapper-6 {
+  width: 56px;
+  height: 19px;
+  top: 17px;
+  left: 164px;
+  font-family: "Inter", Helvetica;
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 15px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 24px;
+  position: absolute;
+  white-space: nowrap;
+}
+
+.element .footer {
+  position: absolute;
+  width: 1920px;
+  height: 292px;
+  top: 790px;
+  left: 0;
+  background-color: #000000;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-color: #dfdfdf;
+}
+
+.element .footer-2 {
+  position: absolute;
+  width: 936px;
+  height: 215px;
+  top: 12px;
+  left: 492px;
+}
+
+.element .div-cl-control {
+  width: 936px;
+  height: 24px;
+  top: 54px;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+}
+
+.element .div-cl-layout {
+  position: relative;
+  width: 968px;
+  height: 24px;
+  top: -32px;
+  left: -32px;
+}
+
+.element .div-wrapper {
+  all: unset;
+  box-sizing: border-box;
+  width: 57px;
+  height: 19px;
+  left: 41px;
+  position: absolute;
+  top: 34px;
+}
+
+.element .text-wrapper-7 {
+  height: 16px;
+  top: 0;
+  left: 0;
+  font-family: "Noto Sans KR", Helvetica;
+  font-weight: 300;
+  color: #ffffff;
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: -0.8px;
+  line-height: 16px;
+  position: absolute;
+  white-space: nowrap;
+}
+
+.element .button-2 {
+  all: unset;
+  box-sizing: border-box;
+  width: 57px;
+  height: 19px;
+  left: 135px;
+  position: absolute;
+  top: 34px;
+}
+
+.element .button-3 {
+  all: unset;
+  box-sizing: border-box;
+  width: 127px;
+  height: 20px;
+  left: 223px;
+  position: absolute;
+  top: 34px;
+}
+
+.element .text-wrapper-8 {
+  height: 18px;
+  top: 0;
+  left: 0;
+  font-family: "Noto Sans KR", Helvetica;
+  font-weight: 300;
+  color: #5e5eff;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: -0.9px;
+  line-height: 18px;
+  position: absolute;
+  white-space: nowrap;
+}
+
+.element .button-4 {
+  all: unset;
+  box-sizing: border-box;
+  width: 57px;
+  height: 19px;
+  left: 380px;
+  position: absolute;
+  top: 34px;
+}
+
+.element .div-cl-layout-2 {
+  position: absolute;
+  width: 936px;
+  height: 136px;
+  top: 78px;
+  left: 0;
+}
+
+.element .div-cl-text {
+  width: 100px;
+  height: 16px;
+  top: 64px;
+  position: absolute;
+  left: 0;
+}
+
+.element .text-wrapper-9 {
+  height: 15px;
+  top: 0;
+  left: 0;
+  font-family: "Noto Sans KR", Helvetica;
+  font-weight: 300;
+  color: #ffffff;
+  font-size: 15px;
+  letter-spacing: -0.75px;
+  line-height: 15px;
+  position: absolute;
+  white-space: nowrap;
+}
+
+.element .div-cl-text-2 {
+  position: absolute;
+  width: 34px;
+  height: 20px;
+  top: 96px;
+  left: 0;
+}
+
+.element .text-wrapper-10 {
+  height: 15px;
+  top: 2px;
+  left: 0;
+  font-family: "Noto Sans KR", Helvetica;
+  font-weight: 300;
+  color: #ffffff;
+  font-size: 15px;
+  letter-spacing: -0.75px;
+  line-height: 15px;
+  position: absolute;
+  white-space: nowrap;
+}
+
+.element .naver-com-wrapper {
+  width: 138px;
+  top: 96px;
+  position: absolute;
+  height: 19px;
+  left: 496px;
+}
+
+.element .naver-com {
+  position: absolute;
+  width: 155px;
+  height: 15px;
+  top: 1px;
+  left: 16px;
+  font-family: "Noto Sans KR", Helvetica;
+  font-weight: 300;
+  color: #ffffff;
+  font-size: 15px;
+  letter-spacing: -0.75px;
+  line-height: 15px;
+}
+
+.element .div-cl-text-3 {
+  position: absolute;
+  width: 325px;
+  height: 19px;
+  top: 96px;
+  left: 158px;
+}
+
+.element .text-wrapper-11 {
+  position: absolute;
+  height: 15px;
+  top: 1px;
+  left: 0;
+  font-family: "Noto Sans KR", Helvetica;
+  font-weight: 300;
+  color: #ffffff;
+  font-size: 15px;
+  letter-spacing: -0.75px;
+  line-height: 15px;
+  white-space: nowrap;
+}
+
+.element .div-cl-text-4 {
+  position: absolute;
+  width: 82px;
+  height: 19px;
+  top: 64px;
+  left: 158px;
+}
+
+.element .div-cl-control-2 {
+  width: 150px;
+  top: 66px;
+  position: absolute;
+  height: 19px;
+  left: 496px;
+}
+
+.element .text-wrapper-12 {
+  position: absolute;
+  height: 15px;
+  top: 1px;
+  left: 18px;
+  font-family: "Noto Sans KR", Helvetica;
+  font-weight: 300;
+  color: #ffffff;
+  font-size: 15px;
+  letter-spacing: -0.75px;
+  line-height: 15px;
+  white-space: nowrap;
+}
+
+.element .copyright {
+  position: absolute;
+  width: 262px;
+  height: 20px;
+  top: 249px;
+  left: 492px;
+}
+
+.element .text-wrapper-13 {
+  position: absolute;
+  width: 49px;
+  height: 16px;
+  top: 1px;
+  left: 0;
+  font-family: "Inter", Helvetica;
+  font-weight: 400;
+  color: #6b7280;
+  font-size: 13.2px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 20px;
+  white-space: nowrap;
+}
+
+.element .link-MAYCAN-inc {
+  position: absolute;
+  width: 210px;
+  height: 16px;
+  top: 1px;
+  left: 52px;
+  font-family: "Inter", Helvetica;
+  font-weight: 400;
+  color: #6b7280;
+  font-size: 13.2px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 20px;
+  white-space: nowrap;
+}
+
+.element .navigation {
+  position: absolute;
+  width: 1918px;
+  height: 106px;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  box-shadow: 0px 1px 2px #0000000d;
+}
+
+.element .navbar {
+  position: absolute;
+  width: 639px;
+  height: 50px;
+  top: 31px;
+  left: 365px;
+}
+
+.element .item {
+  left: 519px;
+  position: absolute;
+  height: 50px;
+  top: -1px;
+  font-family: "Noto Sans KR", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 22px;
+  letter-spacing: -1.1px;
+  line-height: 50px;
+  white-space: nowrap;
+}
+
+.element .item-2 {
+  left: 415px;
+  position: absolute;
+  height: 50px;
+  top: -1px;
+  font-family: "Noto Sans KR", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 22px;
+  letter-spacing: -1.1px;
+  line-height: 50px;
+  white-space: nowrap;
+}
+
+.element .item-3 {
+  left: 292px;
+  position: absolute;
+  height: 50px;
+  top: -1px;
+  font-family: "Noto Sans KR", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 22px;
+  letter-spacing: -1.1px;
+  line-height: 50px;
+  white-space: nowrap;
+}
+
+.element .item-4 {
+  left: 123px;
+  position: absolute;
+  height: 50px;
+  top: -1px;
+  font-family: "Noto Sans KR", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 22px;
+  letter-spacing: -1.1px;
+  line-height: 50px;
+  white-space: nowrap;
+}
+
+.element .item-5 {
+  left: 0;
+  position: absolute;
+  height: 50px;
+  top: -1px;
+  font-family: "Noto Sans KR", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 22px;
+  letter-spacing: -1.1px;
+  line-height: 50px;
+  white-space: nowrap;
+}
+
+.element .link {
+  position: absolute;
+  width: 67px;
+  height: 38px;
+  top: 35px;
+  left: 1483px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid;
+  border-color: #d1d5db;
+  box-shadow: 0px 1px 2px #0000000d;
+}
+
+.element .text-wrapper-14 {
+  width: 42px;
+  height: 19px;
+  top: 8px;
+  left: 10px;
+  font-family: "Inter", Helvetica;
+  font-weight: 500;
+  color: #374151;
+  font-size: 15px;
+  letter-spacing: 0;
+  line-height: 24px;
+  position: absolute;
+  white-space: nowrap;
+}

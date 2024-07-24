@@ -1,0 +1,36 @@
+package com.Java.Funct.Web_Control.copy2;
+
+import java.security.Principal;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import com.Java.Funct.DB_Map.SQL_Map;
+import com.Java.Funct.Dto_Util.dto_posts;
+import com.Java.Funct.Dto_Util.dto_users;
+
+@Controller
+public class Web_Control_Admin {
+	@Autowired // db 연결
+	SQL_Map sql;
+
+	@GetMapping("admin_Userpage") // 유저 관리 페이지
+	public String ad_user(Model model, Principal principal) {
+		String user_info = principal.getName();
+	    List<dto_users> Users_li = sql.selectData();
+	    model.addAttribute("user", user_info);
+		model.addAttribute("A", Users_li);
+	    return "/admin_Userpage"; }
+
+	@GetMapping("admin_Postpage") // 게시글 관리 페이지
+	public String ad_post(Model model, Principal principal) {
+		String user_info = principal.getName();
+		List<dto_posts> Posts_li = sql.selectPost();
+		model.addAttribute("user", user_info);
+		model.addAttribute("P", Posts_li);
+	    return "/admin_Postpage"; }
+}
+

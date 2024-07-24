@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../css/Community_css/noice_1/globals.css" />
+    <link rel="stylesheet" href="../css/Community_css/noice_1/style.css" />
+  </head>
+  <body>
+    <div class="screen">
+      <div class="div">
+        <div class="navigation">
+          <div class="navbar">
+          	<div th:if="${user eq 'admin'}">
+				<div class="item-9" Style="cursor: pointer;" onclick="location.href='../admin_Userpage'">관리자 페이지</div>
+			</div>
+            <div style="cursor: pointer;"onclick="location.href='/Community/List'" class="item-10">갓생은 첨이라</div>
+            <div style="cursor: pointer;"onclick="location.href='../Benefit/List'"class="item-11">혜택 및 지원금</div>
+			<div  style="cursor: pointer;"onclick="location.href='../Main'" class="item-12">홈페이지</div>
+          </div>
+		  <div class="view-4">
+		  	<button class="button-7">환영합니다&nbsp;[[${user}]]</button>
+		  	<a href="/logout" class="button-7" style="cursor: pointer;">로그아웃</a>
+		  	<img onclick="location.href='../Mypage/main'" style="cursor: pointer;" class="vector-4" src="../images/benefit_img/vector-4.svg" />
+		  </div>
+        </div>
+        <div class="main">
+          <div class="overlap">
+            <div class="view">
+              <img class="element-EC-EC" src="../images/comu_img/noice_img/2-ec-84-9c-ec-9a-b8-ec-b2-ad-eb-85-84-ec-a3-bc-ea-b0-84-ed-82.png" />
+              <div class="div-rtx">
+                <div class="list">
+                  <div class="item">
+                    <img class="img" src="../images/comu_img/noice_img/item-2.png" />
+                    <p class="p">
+                      <span class="text-wrapper">행사주제 :</span> <span class="span"> 청년, 희망, 도약</span>
+                    </p>
+                  </div>
+                  <div class="item-2">
+                    <p class="p">
+                      <span class="text-wrapper">슬로건 :</span> <span class="span"> 우리들의 청춘 Jump!</span>
+                    </p>
+                    <div class="item-3"></div>
+                  </div>
+                  <div class="item-4">
+                    <p class="p">
+                      <span class="text-wrapper">행사기간 :</span>
+                      <span class="span"> 2023. 9.16(토)~9.21(목), 6일간</span>
+                    </p>
+                    <img class="img" src="../images/comu_img/noice_img/item-2.png" />
+                  </div>
+                  <div class="item-5">
+                    <p class="p">
+                      <span class="text-wrapper">행사장소 :</span> <span class="span"> 서울광장과 서울시청 일대</span>
+                    </p>
+                    <div class="item-3"></div>
+                  </div>
+                  <div class="item-6">
+                    <p class="p">
+                      <span class="text-wrapper">참여대상 :</span>
+                      <span class="span"> 서울거주·활동 청년, 청년정책에 관심 있는 시민 누구나</span>
+                    </p>
+                    <div class="item-3"></div>
+                  </div>
+                  <div class="item-7">
+                    <p class="p"><span class="text-wrapper">주최 :</span> <span class="span"> 서울특별시</span></p>
+                    <div class="item-3"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="view-2">
+              <div class="element">
+                <p class="text-wrapper-2">
+                  ‘2023 서울 청년을 위한 일주일’에서 청년들이 필요한 정보와 활력도 얻고 역량도 기를 수 있는 한 주를 만나
+                  보시기를 바랍니다!
+                </p>
+              </div>
+              <div class="element-2">
+                <div class="overlap-group">
+                  <p class="text-wrapper-3">
+                    ‘우리들의 청춘 Jump!’를 슬로건으로 9.16(토)~9.21(목) 6일간 개최되며 서울에 거주하거나 활동하는 청년,
+                    청년정책에 관심 있는 시민들과 함께하는 축제입
+                  </p>
+                  <div class="text-wrapper-4">니다.</div>
+                </div>
+                <p class="text-wrapper-5">
+                  청년정책을 직접 경험해 볼 수 있는 청년정책 체험 박람회부터 강연과 멘토링이 진행되는 청년주간
+                  프로그램까지 청년들의 다양한 고민을 해결해 줄 다채로운
+                </p>
+                <div class="text-wrapper-6">프로그램들을 선보입니다.</div>
+              </div>
+              <p class="text-wrapper-7">
+                서울청년주간이 올해는 ‘서울 청년을 위한 일주일‘이라는 이름으로 여러분들을 찾아옵니다.
+              </p>
+              <p class="text-wrapper-8">2023 서울 청년을 위한 일주일</p>
+            </div>
+            <img class="image" src="../images/comu_img/noice_img/image.png" />
+          </div>
+          <div class="memder">
+            <div class="area">
+              <div class="your">
+                <div class="name">
+                  <img class="vector" src="../images/comu_img/noice_img/vector-3.svg" />
+                  <div class="id"><div class="text-wrapper-9">관리자</div></div>
+                  <div class="day"><div class="text-wrapper-10">2023년 11월 06일</div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="heading"><p class="text-wrapper-11">2023 서울 ‘청년을 위한 일주일’ 행사 개최</p></div>
+          <div class="div-flex-wrapper">
+            <div class="div-flex">
+              <div class="overlap-group-2">
+                <div class="div-group"></div>
+                <img class="vector-2" src="../images/comu_img/noice_img/vector-1.svg" />
+                <div class="p-text-xs"><div class="text-wrapper-12">1</div></div>
+              </div>
+            </div>
+          </div>
+          <div class="form">
+            <div class="div-mb">
+              <div class="textarea"><div class="text-wrapper-13">댓글을 적어주세요</div></div>
+            </div>
+            <button class="button"><div class="text-wrapper-14">댓글 남기기</div></button>
+          </div>
+          <div class="view-3">
+            <div class="footer">
+              <div class="div-mr-margin-wrapper">
+                <div class="div-mr-margin">
+                  <img class="vector-3" src="../images/comu_img/noice_img/vector-3.svg" />
+                  <div class="div-mr">
+                    <div class="p-text-sm"><div class="text-wrapper-15">관리자</div></div>
+                    <div class="div-wrapper"><div class="text-wrapper-16">2023년 11월 06일</div></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="p-text-gray"><div class="text-wrapper-17">안녕하세요</div></div>
+            <div class="div-mt">
+              <button class="button-2">
+                <img class="SVG-margin" src="../images/comu_img/noice_img/svg-margin.svg" />
+                <div class="text-wrapper-18">Reply</div>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="footer-2">
+          <div class="footer-3">
+            <div class="div-cl-control">
+              <div class="div-cl-layout">
+                <button class="button-3"><div class="text-wrapper-19">대학인싸</div></button>
+                <button class="button-4"><div class="text-wrapper-19">뉴스레터</div></button>
+                <button class="button-5"><div class="text-wrapper-20">개인정보처리방침</div></button>
+                <button class="button-6"><div class="text-wrapper-19">사이트맵</div></button>
+              </div>
+            </div>
+            <div class="div-cl-layout-2">
+              <div class="div-cl-text"><div class="text-wrapper-21">회사명</div></div>
+              <div class="div-cl-text-2"><div class="text-wrapper-22">주소</div></div>
+              <div class="naver-com-wrapper"><div class="naver-com">dbstn6622@naver.com</div></div>
+              <div class="div-cl-text-3">
+                <p class="text-wrapper-23">16391 수원시 권선구 금곡로 229 로얄펠리스 3차 935호</p>
+              </div>
+              <div class="div-cl-text-4"><div class="text-wrapper-23">(주) 대학인싸</div></div>
+              <div class="div-cl-control-2"><div class="text-wrapper-24">010-1234-5678</div></div>
+            </div>
+          </div>
+          <div class="copyright">
+            <div class="text-wrapper-25">© 2023</div>
+            <div class="link-MAYCAN-inc">대학인싸.inc. All Rights Reserved.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

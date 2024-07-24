@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../css/Benefit_css/Content/globals.css" />
+    <link rel="stylesheet" href="../css/Benefit_css/Content/style.css" />
+  </head>
+  <body>
+    <div class="screen">
+      <div class="div">
+        <div class="navigation">
+				  <div class="navbar">
+				  	<div th:if="${user eq 'admin'}">
+						<div class="text-wrapper" Style="cursor: pointer;" onclick="location.href='../admin_Userpage'">관리자 페이지</div>
+					</div>
+					<div class="item-2" style="cursor: pointer;"onclick="location.href='../Community/List'">갓생은 첨이라</div>
+					<div class="item-3" style="cursor: pointer;"onclick="location.href='/Benefit/List'">혜택 및 지원금</div>
+					<div class="item-4" style="cursor: pointer;"onclick="location.href='/Main'">홈페이지</div>
+				  </div>
+           <div class="view">
+			<button class="button">환영합니다&nbsp;[[${user}]]</button>
+			<a href="/logout" class="button" style="cursor: pointer;">로그아웃</a>
+            <img onclick="location.href='../Mypage/main'" style="cursor: pointer;" class="vector" src="../images/benefit_img/vector-4.svg" />
+          </div>
+        </div>
+        <div class="main">
+          <img class="banner" src="../images/benefit_img/content/banner.png" />
+          <div class="div-board-head">
+            <div class="overlap-group">
+              <div class="heading">국민취업제도</div>
+              <div class="span-inline-flex"><div class="text-wrapper-2">D-5</div></div>
+            </div>
+            <div class="span-board-sub-tit">
+              <div class="span-board-date"><div class="text-wrapper-3">2023.9.14</div></div>
+              <div class="span-writer">
+                <div class="pseudo"></div>
+                <div class="text-wrapper-4">고용노동부</div>
+              </div>
+            </div>
+          </div>
+          <img class="p" src="../images/benefit_img/content/202309060955499901-jpg.png">
+          <div class="div-fund-detail">
+            <div class="heading-2">정책소개</div>
+            <div class="div-contents-box">
+              <p class="strong">
+                취업을 원하는 사람에게 취업지원서비스를 종합적으로 제공하고<br />저소득 구직자에게는 생계를 위한
+                최소한의 소득도 지원하는 한국형 실업부조입니다
+              </p>
+            </div>
+          </div>
+          <div class="div-fund-detail-2">
+            <div class="heading-3">정책내용</div>
+            <div class="descriptions">
+              <div class="div-hd-ed">
+                <div class="term">지원내용</div>
+                <div class="details">
+                  <p class="element">
+                    <span class="span">취업지원 서비스 ( 1유형,2유형 )<br /></span>
+                    <span class="text-wrapper-5"
+                      >-1유형 : 취업지원서비스 참여 등 구직활동의무 이행을 전제로 구직촉진수당 <br />&nbsp;&nbsp;(
+                      50X6개월 ) 지급<br />-2유형 : 직업훈련 참여 등 취업지원서비스 참여 시 발생하는 취업활동비용 일부
+                      지원</span
+                    >
+                  </p>
+                </div>
+              </div>
+              <div class="div-hd-bcd">
+                <div class="term-2">지원대상</div>
+                <div class="i-II-wrapper">
+                  <p class="i-II">
+                    <span class="text-wrapper-6">I유형은 ‘구직촉진수당’과’취업지원서비스’를 제공받습니다<br /></span>
+                    <span class="text-wrapper-5"
+                      >가구단위 중위소득 60%이하이고 재산4억원이하이면서<br />최근 2년 안에 100일 또는 800시간 이상의
+                      취업경험이 있는 사람을 중심으로 합니다<br
+                    /></span>
+                    <span class="text-wrapper-6">II유형은 ‘구직촉진수당’과’취업지원서비스’를 제공받습니다<br /></span>
+                    <span class="text-wrapper-5"
+                      >I유형에 해당하지 않는 특정계층, 청년, 중장년 등이 지원 대상입니다</span
+                    >
+                  </p>
+                </div>
+              </div>
+              <div class="div-hd-fdfdd">
+                <div class="term-3">신청방법</div>
+                <div class="details">
+                  <p class="div-2">
+                    <span class="span"
+                      >워크넷에서 구직 신청<br />취업지원 신청서 제출 ( 고용센터 방문, 홈페이지 이용
+                    </span>
+                    <span class="text-wrapper-7">)</span>
+                  </p>
+                </div>
+              </div>
+              <div class="div-full">
+                <div class="term-4">제출서류</div>
+                <div class="div-wrapper">
+                  <p class="text-wrapper-8">
+                    취업지원 신청서 및 개인정보 수집 및 이용제공 동의서 제출<br />필요 시 추가 서류 제출
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="https://www.kua.go.kr/uaptm010/selectMain.do" style="cursor: pointer;" class="button-2" /><div class="text-wrapper-9">신청하기</div></a>
+        </div>
+        <footer class="footer">
+          <div class="view-2">
+            <div class="div-cl-control">
+              <div class="div-cl-layout">
+                <button class="button-3"><div class="text-wrapper-10">대학인싸</div></button>
+                <button class="button-4"><div class="text-wrapper-10">뉴스레터</div></button>
+                <button class="button-5"><div class="text-wrapper-11">개인정보처리방침</div></button>
+                <button class="button-6"><div class="text-wrapper-10">사이트맵</div></button>
+              </div>
+            </div>
+            <div class="div-cl-layout-2">
+              <div class="div-cl-text"><div class="text-wrapper-12">회사명</div></div>
+              <div class="div-cl-text-2"><div class="text-wrapper-13">주소</div></div>
+              <div class="naver-com-wrapper"><div class="naver-com">dbstn6622@naver.com</div></div>
+              <div class="div-cl-text-3">
+                <p class="text-wrapper-14">16391 수원시 권선구 금곡로 229 로얄펠리스 3차 935호</p>
+              </div>
+              <div class="div-cl-text-4"><div class="text-wrapper-14">(주) 대학인싸</div></div>
+              <div class="div-cl-control-2"><div class="text-wrapper-15">010-1234-5678</div></div>
+            </div>
+          </div>
+          <div class="span-text-sm">
+            <div class="text-wrapper-16">© 2023</div>
+            <div class="link-MAYCAN-inc">대학인싸.inc. All Rights Reserved.</div>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>

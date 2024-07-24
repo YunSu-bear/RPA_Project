@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="/css/Mypage_css/globals.css" />
+    <link rel="stylesheet" href="/css/Mypage_css/style.css" />
+  </head>
+  <body>
+    <div class="screen">
+      <div class="div">
+      <div class="navigation">
+          <div class="navbar">
+		  <div class="item-3" style="cursor: pointer;"onclick="location.href='Community/List'">갓생은 첨이라</div>
+		  <div class="item-4" style="cursor: pointer;" onclick="location.href='Benefit/List'">혜택 및 지원금</div>
+		  <div class="item-5" style="cursor: pointer;" onclick="location.href='/Main'">홈페이지</div>
+		      </div>       
+          </div>
+         <div class="view-6">
+			<button class="button-6">환영합니다&nbsp;[[${user}]]</button>
+			<a href="/logout" class="button-6" style="cursor: pointer;">로그아웃</a>
+		    <img onclick="location.href='/Mypage/main'" style="cursor: pointer;" class="vector" src="/images/benefit_img/vector-4.svg" />
+		</div>
+        </div>
+        <div th:each="mydatas : ${mydata}" class="main">
+          <div class="heading">
+            <div class="view"><div class="text-wrapper">프로필</div></div>
+            <div class="div-wrapper"><p class="p">주소 변경, 비밀번호 변경, 회원탈퇴를 할 수 있습니다.</p></div>
+          </div>
+          <div class="form">
+            <div class="descriptions">
+              <div class="overlap-group-wrapper">
+                <div class="overlap-group">
+                  <div class="term"><div class="text-wrapper-2">아이디</div></div>
+                  <div class="details"><div class="text-wrapper-3" th:text="${mydatas.u_id}"></div></div>
+                </div>
+              </div>
+              <div class="overlap-wrapper">
+                <div class="overlap">
+                  <div class="term-2"><div class="text-wrapper-4">이름</div></div>
+                  <div class="div-flex-wrapper">
+                    <div class="div-flex"><div class="text-wrapper-5" th:text="${mydatas.u_nm}"></div></div>
+                  </div>
+                </div>
+              </div>
+              <div class="view-2">
+                <div class="overlap">
+                  <div class="term-2"><div class="text-wrapper-6">주소</div></div>
+                  <div class="div-flex-wrapper">
+                    <div class="div-flex">
+                      <form action="/Mypage/re_addr_action" method="post">
+                      <div><input type="text" class="input" name="u_addr" placeholder="주소를 입력하세요" th:value="${mydatas.u_addr}"></div>
+                      <button type="submit" class="button" style="cursor:pointer;"><div class="text-wrapper-7">수정</div></button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="view-3">
+                <div class="overlap">
+                  <div class="term-2"><div class="text-wrapper-6">주민번호</div></div>
+                  <div class="div-flex-wrapper">
+                    <div class="div-flex-2">
+                      <div class="text-wrapper-8" th:text="${mydatas.u_sec_n1}"></div>
+                      <img class="line" src="img/line-1.svg" />
+                      <div class="text-wrapper-9" th:text="${mydatas.u_sec_n2}"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="view-4">
+                <div class="overlap-2">
+                  <div class="term-3"><div class="text-wrapper-6">비밀번호</div></div>
+                  <div class="link-wrapper" ><div onclick="location.href='/Mypage/edit_pw'" style="cursor:pointer;" class="link">비밀번호 변경</div></div>
+                </div>
+              </div>
+              <div class="view-5">
+                <div class="overlap-2">
+                  <div class="term-3"><div class="text-wrapper-6">회원탈퇴</div></div>
+                  <div class="link-wrapper"><div onclick="location.href='/Mypage/delete'" class="link-2">탈퇴하기</div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer">
+          <div class="footer-2">
+            <div class="div-cl-control">
+              <div class="div-cl-layout">
+                <button class="button-2"><div class="text-wrapper-10">대학인싸</div></button>
+                <button class="button-3"><div class="text-wrapper-10">뉴스레터</div></button>
+                <button class="button-4"><div class="text-wrapper-11">개인정보처리방침</div></button>
+                <button class="button-5"><div class="text-wrapper-10">사이트맵</div></button>
+              </div>
+            </div>
+            <div class="div-cl-layout-2">
+              <div class="div-cl-text"><div class="text-wrapper-12">회사명</div></div>
+              <div class="div-cl-text-2"><div class="text-wrapper-13">주소</div></div>
+              <div class="naver-com-wrapper"><div class="naver-com">dbstn6622@naver.com</div></div>
+              <div class="div-cl-text-3">
+                <p class="text-wrapper-14">16391 수원시 권선구 금곡로 229 로얄펠리스 3차 935호</p>
+              </div>
+              <div class="div-cl-text-4"><div class="text-wrapper-14">(주) 대학인싸</div></div>
+              <div class="div-cl-control-2"><div class="text-wrapper-15">010-1234-5678</div></div>
+            </div>
+          </div>
+          <div class="copyright">
+            <div class="text-wrapper-16">© 2023</div>
+            <div class="link-MAYCAN-inc">대학인싸.inc. All Rights Reserved.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

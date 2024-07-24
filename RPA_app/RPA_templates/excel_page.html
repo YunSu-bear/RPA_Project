@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function exportData() {
+            window.location.href = "{% url 'export' %}";
+        }
+    </script>
+    <title>사출 견적서</title>
+    <style>
+        .table-container {
+            width: 90%;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-bottom: 20px;
+            border-radius: 5px 5px 0 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            border: 1px solid #000;
+            text-align: center;
+        }
+        th, td {
+            border: 1px solid #000;
+            padding: 8px; /* 패딩을 추가하여 공간을 확보 */
+        }
+        th {
+            background-color: #808080c1;
+        }
+        input, select, textarea {
+            width: 100%;
+            box-sizing: border-box; /* padding과 border를 너비에 포함 */
+            margin: 0;
+            padding: 5px; /* 내부 패딩 설정 */
+        }
+        textarea {
+            resize: vertical; /* 세로 크기 조정 가능 */
+        }
+        .btn-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .btn-download {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn-download:hover {
+            background-color: #45a049;
+        }
+        .small-width{
+            width: 30%; /* 필드 너비를 조정 */
+        }
+    </style>
+</head>
+<body>
+    <div class="table-container">
+        <div class="header">
+            <h1>사출 견적서</h1>
+        </div>
+        <br>
+        <!-- 상위 -->
+            <table>
+                <!-- 금형번호 -->
+                <tr>
+                    <td>금형번호</td>
+                    <td>{{ data.Mold_Number }}</td>
+                    <td rowspan="6">기준임율<br>[ oz / ton ]</td>
+                    <td>4oz</td>
+                    <td>120ton[▼]</td>
+                    <td>₩ 180,000</td>
+                </tr>
+                <!-- 사출설비 -->
+                <tr>
+                    <td>사출설비</td>
+                    <td>{{ user_data.Injection_Equipment }}</td>
+                    <td>6oz</td>
+                    <td>150ton[▼]</td>
+                    <td>₩ 240,000</td>
+                </tr>
+                <!-- 취출방식 -->
+                <tr>
+                    <td>취출방식</td>
+                    <td>{{ user_data.Extraction_Method }}</td>
+                    <td>10oz</td>
+                    <td>170ton[▼]</td>
+                    <td>₩ 300,000</td>
+                </tr>
+                <!-- 가동시간 -->
+                <tr>
+                    <td>가동시간</td>
+                    <td>{{ user_data.Operating_Time }}</td>
+                    <td>15oz</td>
+                    <td>200ton[▼]</td>
+                    <td>₩ 350,000</td>
+                </tr>
+                <!-- 포장방법 -->
+                <tr>
+                    <td>포장방법</td>
+                    <td>{{ user_data.Packaging_Method }}</td>
+                    <td>20oz</td>
+                    <td>240ton[▼]</td>
+                    <td>₩ 380,000</td>
+                </tr>
+                <!-- 작성일자 -->
+                <tr>
+                    <td>작성일자</td>
+                    <td>{{ user_data.Date_of_Preparation }}</td>
+                    <td>30oz</td>
+                    <td>280ton[▼]</td>
+                    <td>₩ 400,000</td>
+                </tr>
+            </table>
+            <div><strong>※ 산출근거: 재료비, C/T, 설비임률은 당사 기준에 준함</strong></div>
+            <br>
+            <!-- 중간 -->
+            <table>
+                <thead>
+                    <!-- 중 헤더 -->
+                    <tr>
+                        <th>제품명</th>
+                        <td>{{ data.Product_Name }}</td>
+                        <th>규격</th>
+                        <td>{{ user_data.Specification }}</td>
+                        <th>CAVITY</th>
+                        <td>{{ data.Cav }}</td>
+                    </tr>
+                </thead>           
+                <tbody>
+                    <!-- 중 바디 -->
+                    <tr>
+                        <th>일일 생산가능 수량</th>
+                        <td>{{ data.B_Daily_Production }}</td>
+                        <th>사용 원자재<br>( RESIN )</th>
+                        <td>{{ user_data.Raw_Materials_Used }}</td>
+                        <th>원자재 단가<br>( 1KG )</th>
+                        <td>₩ {{ data.B_Raw_Material_Price }}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <!-- 하위 -->
+            <table>
+                <!-- 상세 값 -->
+                <thead>
+                    <!-- 첫번째 -->
+                    <tr>
+                        <th colspan="3">제품중량 ( 1EA )</th>
+                        <th>런너 중량</th>
+                        <th colspan="2">제품 중량 ( 런너 포함 )</th>
+                        <th colspan="2">원자재 비용</th>
+                    </tr>
+                    <!-- 두번째 -->
+                    <tr>
+                        <td colspan="3">{{ data.Product_Weight }} g </td>
+                        <td>{{ data.SR_Weight }} g </td>
+                        <td colspan="2">{{ data.B_Gross_Weight }} g </td>
+                        <td colspan="2">₩ {{ data.B_Raw_Material_Cost }}</td>
+                    </tr>
+                    <!-- 세번째 -->
+                    <tr>
+                        <th colspan="2">공정명</th>
+                        <th>사용 기기</th>
+                        <th colspan="2">제품당 공정<br>TIME ( 초 )</th>
+                        <th>일일 생산수량<br>( 22시간 기준 )</th>
+                        <th>가공 임율<br>( 1일 / 22시간 )</th>
+                        <th>가공비</th>
+                    </tr>
+                    <!-- 네번째 -->
+                    <tr>
+                        <td colspan="2">{{ user_data.Process_Name }}</td>
+                        <td>{{ data.Bright_tone }} TON</td>
+                        <td colspan="2">{{ data.C_T }}</td>
+                        <td>{{ data.B_Daily_Production }}</td>
+                        <td>₩ {{ data.B_Facility_Utilization_Rate }}</td>
+                        <td>₩ {{ data.B_Per_Unit_Utilization_Cost }}</td>
+                    </tr>
+                </thead>
+                <!-- 계산 내용 -->
+                <tbody>
+                    <!-- 제목 -->
+                    <tr>
+                        <th colspan="2">내용</th>
+                        <th colspan="4">계산 내용</th>
+                        <th>금액</th>
+                        <th>비고</th>
+                    </tr>
+                    <!-- 내용 -->
+                    <tr>
+                        <td>1</td>
+                        <td>원자재 비용</td>
+                        <td colspan="4">(원자재단가(1KG)/1.000) × 제품 중량(런너포함)</td>
+                        <td>₩ {{ data.B_Raw_Material_Cost }}</td>
+                        <td>{{ user_data.Remarks_1 }}</td>
+                    </tr>
+                    <!-- 가공비 -->
+                    <tr>
+                        <td>2</td>
+                        <td>가공비</td>
+                        <td colspan="4">가공임율 / 일일 생산수량</td>
+                        <td>₩ {{ data.B_Per_Unit_Utilization_Cost }}</td>
+                        <td>{{ user_data.Remarks_2 }}</td>
+                    </tr>
+                    <!-- 일반 관리비용 -->
+                    <tr>
+                        <td>3</td>
+                        <td>일반 관리비용</td>
+                        <td colspan="3">1 + 2</td>
+                        <td class=".small-width">{{ user_data.General_Management_Rate }} % </td>
+                        <td>₩ {{ data.B_General_Management_Cost }}</td>
+                        <td>{{ user_data.Remarks_3 }}</td>
+                    </tr>
+                    <!-- 불량 로스 -->
+                    <tr>
+                        <td>4</td>
+                        <td>불량 LOSS</td>
+                        <td colspan="3">1 + 2</td>
+                        <td class=".small-width">{{ user_data.Defective_Rate }} % </td>
+                        <td>₩ {{ data.B_Defective_Loss }}</td>
+                        <td>{{ user_data.Remarks_4 }}</td>
+                    </tr>
+                    <!-- 기업 이윤 -->
+                    <tr>
+                        <td>5</td>
+                        <td>기업 이윤</td>
+                        <td colspan="3">1 + 2 + 4 + 5</td>
+                        <td class=".small-width">{{ user_data.Profit_Rate }} % </td>
+                        <td>₩ {{ data.B_Corporate_Profit }}</td>
+                        <td>{{ user_data.Remarks_5 }}</td>
+                    </tr>
+                    <!-- 합계금액 -->
+                    <tr>
+                        <th colspan="6">기타내용</th>
+                        <th>합계금액</th>
+                        <td>₩ {{ data.B_Sum_Cost }}</td>
+                    </tr>
+                    <!-- 최종 견적가 -->
+                    <tr>
+                        <td rowspan="2" colspan="6">{{ user_data.Other }}</td>
+                        <th>최종 견적가</th>
+                        <td>₩ {{ user_data.Final_Estimate }}</td>
+                    </tr>
+                    <!-- 업체 결정가 -->
+                    <tr>
+                        <th>업체 결정가</th>
+                        <td>₩ {{ user_data.Supplier_Estimate }}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <form action="{% url 'export' %}" method="GET">
+            <div class="btn-container">
+                <input type="hidden" name="data_number" value="{{ data.Data_Number }}">
+                <button type="submit" class="btn-download">엑셀 파일 생성</button>
+            </div>
+            </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../css/Benefit_css/Content/globals.css" />
+    <link rel="stylesheet" href="../css/Benefit_css/Content/style3.css" />
+  </head>
+  <body>
+    <div class="screen">
+      <div class="div">
+        <div class="navigation">
+          <div class="navbar">
+          	<div th:if="${user eq 'admin'}">
+						<div class="text-wrapper" Style="cursor: pointer;" onclick="location.href='../admin_Userpage'">관리자 페이지</div>
+			</div>
+            <div class="item-2" style="cursor: pointer" onclick="location.href='../Community/List'">갓생은 첨이라</div>
+            <div class="item-3"	style="cursor: pointer;"onclick="location.href='/Benefit/List'">혜택 및 지원금</div>
+            <div class="item-4"	style="cursor: pointer;"onclick="location.href='/Main'">홈페이지</div>
+          </div>
+		  <div class="view">
+		  	<button class="button">환영합니다&nbsp;[[${user}]]</button>
+		  	<a href="/logout" class="button" style="cursor: pointer;">로그아웃</a>
+		  	<img onclick="location.href='../Mypage'" style="cursor: pointer;" class="vector" src="../images/benefit_img/vector-4.svg" />
+		  </div>
+        </div>
+        <div class="main">
+          <img class="banner" src="../images/benefit_img/content/banner.png" />
+          <div class="div-board-head">
+            <div class="heading">2023 청년내일저축계좌</div>
+            <div class="span-inline-flex"><div class="text-wrapper-2">D-15</div></div>
+            <div class="span-board-sub-tit">
+              <div class="span-board-date"><div class="text-wrapper-3">2023.9.14</div></div>
+              <div class="span-writer">
+                <div class="pseudo"></div>
+                <div class="text-wrapper-4">보건복지부</div>
+              </div>
+            </div>
+          </div>
+          <img class="p" src="../images/benefit_img/content/3-3.png">
+          <div class="div-fund-detail">
+            <div class="heading-2">정책소개</div>
+            <div class="div-contents-box">
+              <p class="strong">
+                저소득청년에 저축을 통한 자산형성을 지원하여 청년이 교육, 주거, 창업 등 미래에 투자하고, <br />위기에
+                대비할 수 있도록 지원합니다.
+              </p>
+            </div>
+          </div>
+          <div class="div-fund-detail-2">
+            <div class="heading-3">정책내용</div>
+            <div class="descriptions">
+              <div class="div-hd-ed">
+                <div class="term">지원내용</div>
+                <div class="details">
+                  <p class="element">
+                    <span class="span">본인 저축액(월 10만원) 대비 1:1 정부 매칭 지원<br />-</span>
+                    <span class="text-wrapper-5"
+                      >3년간 통장유지, 근로활동 지속, 교육이수, 자금사용계획서 제출시<br />적립급 전액 지급<br
+                    /></span>
+                    <span class="span">-</span>
+                    <span class="text-wrapper-5"
+                      >정책대상별 추가지원급(근로소득공제금, 탈수급장려금, 내일키움장려금, 내일키움수익금 등) 지급</span
+                    >
+                  </p>
+                </div>
+              </div>
+              <div class="div-hd-bcd">
+                <div class="term-2">지원대상</div>
+                <div class="element-wrapper">
+                  <p class="element-2">
+                    <span class="span">연령 • 소득기준 • 가구소득 • 가구재산 4가지를 모두 충족한 청년<br /></span>
+                    <span class="text-wrapper-5"
+                      >(가입연령) 신청 당시 만 19~34세<br />(근로 • 사업소득) 근로 • 사업소득이 월 50만원 초과~월220만원
+                      이하<br />(가구소득) 기준 중위소득 100% 이하<br />(가구재산) 대도시 3.5억원, 중소도시 2억원,
+                      농어촌 1.7억원 이하</span
+                    >
+                  </p>
+                </div>
+              </div>
+              <div class="div-hd-fdfdd">
+                <div class="term-3">신청방법</div>
+                <div class="details">
+                  <p class="text-wrapper-6">
+                    복지로를 통해서 신청 가능<br />방문 신청이 필요한 경우에는 거주지 읍면동 주민센터에서 신청가능
+                  </p>
+                </div>
+              </div>
+              <div class="div-full">
+                <div class="term-4">제출서류</div>
+                <div class="div-wrapper"><div class="text-wrapper-7">-</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000060" style="cursor: pointer;" class="button-2">
+			<div class="text-wrapper-8">신청하기</div></a>
+        <footer class="footer">
+          <div class="view-2">
+            <div class="div-cl-control">
+              <div class="div-cl-layout">
+                <button class="button-3"><div class="text-wrapper-9">대학인싸</div></button>
+                <button class="button-4"><div class="text-wrapper-9">뉴스레터</div></button>
+                <button class="button-5"><div class="text-wrapper-10">개인정보처리방침</div></button>
+                <button class="button-6"><div class="text-wrapper-9">사이트맵</div></button>
+              </div>
+            </div>
+            <div class="div-cl-layout-2">
+              <div class="div-cl-text"><div class="text-wrapper-11">회사명</div></div>
+              <div class="div-cl-text-2"><div class="text-wrapper-12">주소</div></div>
+              <div class="naver-com-wrapper"><div class="naver-com">dbstn6622@naver.com</div></div>
+              <div class="div-cl-text-3">
+                <p class="text-wrapper-13">16391 수원시 권선구 금곡로 229 로얄펠리스 3차 935호</p>
+              </div>
+              <div class="div-cl-text-4"><div class="text-wrapper-13">(주) 대학인싸</div></div>
+              <div class="div-cl-control-2"><div class="text-wrapper-14">010-1234-5678</div></div>
+            </div>
+          </div>
+          <div class="span-text-sm">
+            <div class="text-wrapper-15">© 2023</div>
+            <div class="link-MAYCAN-inc">대학인싸.inc. All Rights Reserved.</div>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>

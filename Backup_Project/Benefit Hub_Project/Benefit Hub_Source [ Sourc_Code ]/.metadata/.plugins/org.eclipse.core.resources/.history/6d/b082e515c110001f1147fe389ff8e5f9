@@ -1,0 +1,7 @@
+package com.Java.Funct.Web_Control;
+
+@Controller
+@RequestMapping("Mypage")
+public class Web_Control_Mypage {
+
+}

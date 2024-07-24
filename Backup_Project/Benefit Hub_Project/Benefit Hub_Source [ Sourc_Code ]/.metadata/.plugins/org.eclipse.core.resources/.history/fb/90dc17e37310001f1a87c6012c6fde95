@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="/css/Main_css/globals.css">
+    <link rel="stylesheet" type="text/css" href="/css/Main_css/style.css">
+  </head>
+  
+  <body>
+    <div class="mainpage-login">
+		<div class="navigation">
+		      <div class="navbar">
+		        <div th:if="${user eq 'admin'}">
+					<div class="item-2" Style="cursor: pointer;" onclick="location.href='Admin/admin_Userpage'">관리자 페이지</div>
+				</div>
+		        <div class="item-3" style="cursor: pointer;"onclick="location.href='Community/List'">갓생은 첨이라</div>
+		        <div class="item-4" style="cursor: pointer;" onclick="location.href='Benefit/List'">혜택 및 지원금</div>
+		  		<div class="item-5" style="cursor: pointer;" onclick="location.href='Main'">홈페이지</div>
+		      </div>       
+			<div th:if="${user != null}">
+				<div class="view">
+				       <button class="button-6">환영합니다&nbsp;[[${user}]]</button>
+				       <a href="/logout" class="button-6" style="cursor: pointer;">로그아웃</a>
+				       <img onclick="location.href='/Mypage'" style="cursor: pointer;" class="vector-2" src="/images/benefit_img/vector-4.svg" />
+				</div>
+			</div>
+			<div th:if="${user == null}">
+			    <div class="link-ts" style="cursor: pointer;" onclick="location.href='login/welcom'">
+			        <div class="text-wrapper-ts">로그인</div>
+			    </div>
+			</div>
+			
+		    </div>
+      <div class="banner">
+        <div class="slice-animation">
+          <div class="button">
+            <div class="overlap-group">
+              <div class="text-wrapper">1</div>
+              <div class="div">/</div>
+              <div class="text-wrapper-2">4</div>
+            </div>
+          </div>
+          <div class="portugal-wrapper"><img class="portugal" src="/images/main_img/portugal.png" /></div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="new-post-section">
+          <div class="latest-posts">
+            <div class="text-wrapper-3">최신&nbsp;&nbsp;게시글</div>
+            <div class="list">
+              <div class="link">
+                <div class="txt"><p class="p">감염병 대응 빅데이터 활용 아이디어 공모전</p></div>
+                <div class="img-2"></div>
+              </div>
+              <div class="link-2">
+                <div class="txt">
+                  <div class="p-sub-txt">
+                    <p class="element-chunman-art">
+                      [2024 제 2회 ChunMan Art for Young 공모전]<br />(시각예술 전 분야)
+                    </p>
+                  </div>
+                </div>
+                <div class="img-3"></div>
+              </div>
+              <div class="link-3">
+                <div class="txt">
+                  <div class="p-sub-txt">
+                    <p class="element">[청년신체건강증진서비스] 3개월간 월 24만원!<br />(10% 본인부담)</p>
+                  </div>
+                </div>
+                <div class="img-4"></div>
+              </div>
+              <div class="link-4">
+                <div class="txt">
+                  <div class="p-sub-txt"><p class="p">[스페이스 작당] 청년들의 작당 1기 모집</p></div>
+                </div>
+                <div class="img-5"></div>
+              </div>
+            </div>
+          </div>
+          <div onclick="location.href='Community/noice'" style="cursor:pointer;" class="notice-section">
+            <div class="link-wrapper">
+              <div class="link-5">
+                <div class="overlap-group-2">
+                  <p class="text-wrapper-4">
+                    ‘우리들의 청춘 Jump!’를 슬로건으로 9.16(토)~9.21(목) 6일간 개최되며 서울에 거주하거나 활동하는 청년,
+                    청년정책에 관심 있는 시민들과 함께하는 축제입니다
+                  </p>
+                  <div class="link-head">
+                    <div class="text">
+                      <div class="p-text-xs"><div class="text-wrapper-5">2023년 11월 06일</div></div>
+                    </div>
+                    <div class="heading"><div class="text-wrapper-6">서울 ‘청년을 위한...</div></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="text-wrapper-7">공지사항</div>
+          </div>
+        </div>
+        <div class="announcement-section">
+          <div class="heading-2">추천 게시글</div>
+          <div class="list-2">
+            <div onclick="location.href='/Benefit/7'" style="cursor:pointer;" class="link-6">
+              <div class="div-wrapper"><div class="text-wrapper-8">한국장학재단</div></div>
+              <div class="link-7">
+                <p class="w-atoon-insight-1">[ 국가 장학금 ]</p>
+              </div>
+              <div class="img-wrapper"><img class="img-6" src="/images/main_img/collage.png" /></div>
+            </div>
+            <div class="link-8">
+              <div class="div-wrapper"><div class="text-wrapper-8">과학기술정보통신부</div></div>
+              <div class="element-wrapper">
+                <p class="element-2">[ 정보보호 취업박람회 ]<br />2023 하반기 정보보호 취업박람회</p>
+              </div>
+              <div class="img-wrapper"><img class="img-7" src="/images/main_img/infopro.png" /></div>
+            </div>
+            <div onclick="location.href='/Benefit/2'" style="cursor:pointer;" class="link-9">
+              <div class="div-wrapper"><div class="text-wrapper-10">국토교통부</div></div>
+              <div class="link-7">
+                <p class="w-atoon-insight">[ 청년월세 특별지원 ] 최대 240만원 지원! 1년간 매달 최대 20만 원씩</p>
+              </div>
+              <div class="img-wrapper"><img class="img-7" src="/images/main_img/sosopln.png" /></div>
+            </div>
+            <div onclick="location.href='/Benefit/8'" style="cursor:pointer;" class="link-10">
+              <div class="div-wrapper"><div class="text-wrapper-11">고용노동부</div></div>
+              <div class="link-7">
+                <p class="element-3">[ 청년일자리 도약장려금 ]<br />14만개의 청년일자리를 위한</p>
+              </div>
+              <div class="img-wrapper"><img class="img-6" src="/images/main_img/job.png" /></div>
+            </div>
+          </div>
+        </div>
+        <div class="footer">
+          <div class="footer-2">
+            <div class="div-cl-control">
+              <div class="div-cl-layout">
+                <button class="button-2"><div class="text-wrapper-12">대학인싸</div></button>
+                <button class="button-3"><div class="text-wrapper-12">뉴스레터</div></button>
+                <button class="button-4"><div class="text-wrapper-13">개인정보처리방침</div></button>
+                <button class="button-5"><div class="text-wrapper-12">사이트맵</div></button>
+              </div>
+            </div>
+            <div class="div-cl-layout-2">
+              <div class="div-cl-text"><div class="text-wrapper-14">회사명</div></div>
+              <div class="div-cl-text-2"><div class="text-wrapper-15">주소</div></div>
+              <div class="naver-com-wrapper"><div class="naver-com">dbstn6622@naver.com</div></div>
+              <div class="div-cl-text-3">
+                <p class="text-wrapper-16">16391 수원시 권선구 금곡로 229 로얄펠리스 3차 935호</p>
+              </div>
+              <div class="div-cl-text-4"><div class="text-wrapper-16">(주) 대학인싸</div></div>
+              <div class="div-cl-control-2"><div class="text-wrapper-17">010-1234-5678</div></div>
+            </div>
+          </div>
+          <div class="copyright">
+            <div class="text-wrapper-18">© 2023</div>
+            <div class="link-MAYCAN-inc">대학인싸.inc. All Rights Reserved.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

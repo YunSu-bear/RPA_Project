@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="/css/Main_css/globals.css" />
+    <link rel="stylesheet" href="/css/admin_css/p_style.css" />
+  </head>
+  <body>
+    <div class="div-wrapper">
+      <div class="div">
+        <div class="navigation">
+          <div class="navbar">
+          	<div th:if="${user eq 'admin'}">	
+            	<div class="text-wrapper" style="cursor:pointer;" onclick="location.href='admin_Userpage'">관리자 페이지</div>
+            </div>
+            <div class="item-2" style="cursor:pointer;" onclick="location.href='Community/List'">갓생은 첨이라</div>
+            <div class="item-3" style="cursor:pointer;" onclick="location.href='Benefit/List'">혜택 및 지원금</div>
+            <div class="item-4" style="cursor:pointer;" onclick="location.href='Main'">홈페이지</div>
+          </div>
+          <div th:if="${user !=null}">
+          	<div class="view">
+            	<button class="button">환영합니다&nbsp;[[${user}]]</button>
+            	<a href="/logout" class="button" style="cursor: pointer;">로그아웃</a>
+            	<img onclick="location.href='Mypage'" style="cursor: pointer;" class="vector" src="/images/benefit_img/vector-4.svg" />
+          	</div>
+          </div>
+        </div>
+        <div class="overlap">
+          <div class="frame">
+            <div class="overlap-wrapper">
+              <div class="overlap-group">
+                <div class="element">
+                  <div class="div-row">
+                    <div class="div-card">
+                      <div class="div-card-head">
+                        <header class="header"><div class="text-wrapper-2">게시물 관리</div></header>
+                 		<button onclick="edit_action('edit')" class="overlap-2"><div class="text-wrapper-3">수정하기</div></button>
+                        <button onclick="edit_action('del')" class="overlap-group-2"><div class="text-wrapper-3">삭제하기</div></button>
+                      </div>
+                      <div class="list">
+                        <div class="div-checkbox-wrapper">
+                          <div class="div-checkbox"><div class="label"></div></div>
+                        </div>
+                        <div class="item-5"></div>
+                        <div class="item-6"><div class="text-wrapper-4" >제목</div></div>
+                        <div class="item-7"><div class="text-wrapper-5" >내용</div></div>
+                        <div class="item-8"><div class="text-wrapper-6" >작성자</div></div>
+                        <div class="item-9"><div class="text-wrapper-7" >작성날짜</div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <form id="editForm" action="edit_action_p" method="post">
+                <table class="datas" th:each="P_li : ${P}">
+              	<tr>
+              		<td class ="chk"><input type="checkbox" name="A" th:value=${P_li.get_post_num}></td>
+	              	<td class="num" th:text="${P_li.get_post_num}"></td>
+	              	<td th:text="${P_li.get_title}"></td>
+	              	<td th:text="${P_li.get_chat}"></td>
+	              	<td th:text="${P_li.get_post_user}"></td>
+	              	<td th:text="${P_li.get_time}"></td>
+	             </tr>
+        		</table>
+        		</form>
+                <div class="overlap-group-wrapper">
+                  <div class="overlap-3">
+                    <div class="list-item-link-wrapper">
+                      <div class="list-item-link" style="cursor:pointer;" onclick="location.href='/admin_Postpage'"><div class="text-wrapper-9">커뮤니티 게시물</div></div>
+                    </div>
+                    <div class="list-item-link-2" style="cursor:pointer;" onclick="location.href='/admin_Userpage'">
+                    	<div class="div-card-2"><div class="text-wrapper-10">회원 관리</div></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer">
+            <div class="footer-2">
+              <div class="div-cl-control">
+                <div class="div-cl-layout">
+                  <button class="button-2"><div class="text-wrapper-11">대학인싸</div></button>
+                  <button class="button-3"><div class="text-wrapper-11">뉴스레터</div></button>
+                  <button class="button-4"><div class="text-wrapper-12">개인정보처리방침</div></button>
+                  <button class="button-5"><div class="text-wrapper-11">사이트맵</div></button>
+                </div>
+              </div>
+              <div class="div-cl-layout-2">
+                <div class="div-cl-text"><div class="text-wrapper-13">회사명</div></div>
+                <div class="div-cl-text-2"><div class="text-wrapper-14">주소</div></div>
+                <div class="naver-com-wrapper"><div class="naver-com">dbstn6622@naver.com</div></div>
+                <div class="div-cl-text-3">
+                  <p class="text-wrapper-15">16391 수원시 권선구 금곡로 229 로얄펠리스 3차 935호</p>
+                </div>
+                <div class="div-cl-text-4"><div class="text-wrapper-15">(주) 대학인싸</div></div>
+                <div class="div-cl-control-2"><div class="text-wrapper-16">010-1234-5678</div></div>
+              </div>
+            </div>
+            <div class="copyright">
+              <div class="text-wrapper-17">© 2023</div>
+              <div class="link-MAYCAN-inc">대학인싸.inc. All Rights Reserved.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+    function edit_action(action) {
+        var form = document.getElementById('editForm');
+        var actionInput = document.createElement('input');
+        actionInput.type = 'hidden';
+        actionInput.name = 'action';
+        
+        if (action === 'edit') { actionInput.value = 'edit'; form.action = 'edit_action_p'; } // 수정 액션에 대한 엔드포인트 설정 
+        else if (action === 'del') { actionInput.value = 'del'; form.action = 'delete_action_p'; } // 삭제 액션에 대한 엔드포인트 설정
+        
+        form.appendChild(actionInput);
+        
+        form.submit(); }
+    </script>
+  </body>
+</html>
